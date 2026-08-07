@@ -90,8 +90,13 @@ katmanında (`TransitionError`) korunur. Tüketicisi olmayan route yazmak dead c
 
 - **`features/auth`:** `requireUser` (kimlik) + `requireRole` (rol) Server Action'larda her
   mutation'da çağrılır; `REDDEDILDI` rol kontrolü servis katmanında da tekrarlanır.
-- **Aşama 4 (analitik):** `Report` sayımları, ortalama çözüm süresi (`closedAt - createdAt`) ve
-  park/tür kırılımları bu tablodan üretilir; `ReportEvent` kimin neyi ne zaman yaptığını tutar.
+- **Aşama 4 (analitik) — gerçekleşti:** Gösterge paneli (`/panel`) verisini doğrudan reports
+  verisinden üretir: `Report.status` → açık/geciken sayıları, `Report.closedAt` → ortalama çözüm
+  süresi (`ONARILDI` + `closedAt` dolu kayıtlar, `REDDEDILDI` hariç), `Report.issueType` → tür
+  dağılımı, `Report.createdAt`/`closedAt` → aylık trend. `features/analytics` repository'si
+  (`countOpenReports`, `findResolvedTimes`, `countFaultsByType` vb.) bu tabloya yalnızca
+  salt-okuma erişir; `ReportEvent` zaman çizelgesi detay sayfasında kalır (metriklerde
+  kullanılmaz — PRD 7.2 hesap tanımı `closedAt - createdAt`'tır).
 - **`features/assets`:** `getAssetByCode` ve `normalizeAssetCode` çapraz dilim servis çağrısıyla
   yeniden kullanılır (repository'e atlanmaz).
 

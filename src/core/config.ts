@@ -6,6 +6,7 @@ const schema = z.object({
   APP_URL: z.url({ error: "APP_URL geçerli bir URL olmalı." }),
   MUNICIPALITY_NAME: z.string().min(1).default("Belediye"),
   UPLOAD_DIR: z.string().min(1).default("./public/uploads"),
+  SESSION_SECRET: z.string().min(32, { error: "SESSION_SECRET en az 32 karakter olmalı." }),
 });
 
 const parsed = schema.safeParse(process.env);

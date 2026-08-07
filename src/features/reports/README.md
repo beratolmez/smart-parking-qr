@@ -54,14 +54,44 @@ gereksinimi). `savePhoto` dosyayı `randomUUID()` adıyla `config.UPLOAD_DIR` al
 - **Fotoğraftan EXIF silinir.** KVKK gereği GPS/konum verisi sunucuda kalıcı olarak atılır.
 - **10 MB üst sınır** ve yalnızca `image/jpeg|png|webp` kabul edilir (zod + magic-byte).
 
+## Durum Makinesi (Aşama 3)
+
+Panel (`/panel/bildirimler`) ve QR kapatma akışı (`/q/[code]` girişli personel görünümü) durum
+geçişlerini Server Action `transitionReportAction` üzerinden `service.transitionReport`'a
+gönderir. Geçişler yalnızca servis katmanında doğrulanır — UI'a güvenilmez (PRD 9.1).
+
+`ALLOWED_TRANSITIONS` (`constants.ts`):
+
+```
+YENI      → ATANDI, REDDEDILDI
+ATANDI    → ONARILDI, REDDEDILDI
+ONARILDI  → (terminal)
+REDDEDILDI→ (terminal)
+```
+
+Geçersiz geçiş `TransitionError` (409 `INVALID_TRANSITION`), `REDDEDILDI`'yi `SAHA_GOREVLISI`'nin
+denemesi `ForbiddenError` (403 `FORBIDDEN`), olmayan kayıt `NotFoundError` (404) üretir.
+
+Her geçiş bir `ReportEvent` yazar (`fromStatus`, `toStatus`, `note`, `actorId`); detay sayfası
+olay akışını (timeline) buradan çizer. `closedAt`, `ONARILDI` ve `REDDEDILDI` (tüm terminal
+durumlar) için set edilir; ortalama çözüm süresi (Aşama 4) yalnızca `ONARILDI` kayıtlarını sayar.
+`resolutionNote`/`resolvedPhoto` yalnızca kapalı durumlara yazılır.
+
+**Asset senkronu:** yeni bildirim açılınca `Asset.status = ARIZALI` (koşulsuz); son açık kayıt
+kapanınca `updateMany({ where: { id, status: "ARIZALI" } })` ile `AKTIF` — personelin elle verdiği
+`BAKIMDA`/`HURDA` durumu ezilmez.
+
+**API yerine Server Action:** PRD 10.2'nin `GET/PATCH /api/reports*` route'ları yerine panel
+akışı, kod tabanı konvansiyonu olan Server Component + Server Action desenini kullanır
+(`reports/actions.ts`). `{ error, detail }` hata sözleşmesi ve 409 `INVALID_TRANSITION` servis
+katmanında (`TransitionError`) korunur. Tüketicisi olmayan route yazmak dead code üretir.
+
 ## Entegrasyon Noktaları
 
-- **Aşama 3 (durum makinesi):** `Report.status` (`YENI → ATANDI → ONARILDI`, `REDDEDILDI`)
-  servis katmanında yürütülecek; `ReportEvent` ve `User` modelleri eklenecek; `getOpenReport` panel
-  listesinde de kullanılacak. `resolutionNote`, `resolvedPhoto`, `closedAt` alanları şemada
-  hazırdır.
+- **`features/auth`:** `requireUser` (kimlik) + `requireRole` (rol) Server Action'larda her
+  mutation'da çağrılır; `REDDEDILDI` rol kontrolü servis katmanında da tekrarlanır.
 - **Aşama 4 (analitik):** `Report` sayımları, ortalama çözüm süresi (`closedAt - createdAt`) ve
-  park/tür kırılımları bu tablodan üretilir.
+  park/tür kırılımları bu tablodan üretilir; `ReportEvent` kimin neyi ne zaman yaptığını tutar.
 - **`features/assets`:** `getAssetByCode` ve `normalizeAssetCode` çapraz dilim servis çağrısıyla
   yeniden kullanılır (repository'e atlanmaz).
 

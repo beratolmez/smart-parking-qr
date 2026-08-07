@@ -24,3 +24,19 @@ export const REPORT_STATUS_LABELS: Record<ReportStatus, string> = {
   ONARILDI: "Onarıldı",
   REDDEDILDI: "Reddedildi",
 };
+
+export const REPORT_STATUSES = [
+  "YENI",
+  "ATANDI",
+  "ONARILDI",
+  "REDDEDILDI",
+] as const satisfies readonly ReportStatus[];
+
+export const OVERDUE_DAYS = 7;
+
+export const ALLOWED_TRANSITIONS: Record<ReportStatus, readonly ReportStatus[]> = {
+  YENI: ["ATANDI", "REDDEDILDI"],
+  ATANDI: ["ONARILDI", "REDDEDILDI"],
+  ONARILDI: [],
+  REDDEDILDI: [],
+};

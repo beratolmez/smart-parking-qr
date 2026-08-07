@@ -1,6 +1,7 @@
 import { z } from "zod";
+import type { ReportStatus } from "@/generated/prisma/enums";
 import { normalizeAssetCode } from "@/features/assets/codes";
-import { ISSUE_TYPES } from "@/features/reports/constants";
+import { ISSUE_TYPES, REPORT_STATUSES } from "@/features/reports/constants";
 
 export const MAX_PHOTO_BYTES = 10 * 1024 * 1024;
 export const ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/png", "image/webp"];
@@ -42,3 +43,39 @@ export interface CreateReportInput {
   photo: Buffer; // route File.arrayBuffer()'dan çevrilir; servis şemayı görmez
   clientIp: string;
 }
+
+export const transitionReportSchema = z.object({
+  reportId: z.string().min(1, { error: "Geçersiz istek." }),
+  toStatus: z.enum(REPORT_STATUSES, { error: "Geçerli bir durum seçin." }),
+  note: emptyToUndefined(
+    z.string().max(500, { error: "Not en fazla 500 karakter olabilir." }),
+  ),
+  photo: z
+    .instanceof(File, { error: "Geçersiz dosya." })
+    .optional()
+    .refine((f) => !f || ALLOWED_PHOTO_TYPES.includes(f.type), {
+      error: "Yalnızca JPEG, PNG veya WebP görsel yükleyebilirsiniz.",
+    })
+    .refine((f) => !f || f.size <= MAX_PHOTO_BYTES, {
+      error: "Fotoğraf en fazla 10 MB olabilir.",
+    }),
+});
+
+export type TransitionReportForm = z.infer<typeof transitionReportSchema>;
+
+export interface TransitionReportInput {
+  toStatus: ReportStatus;
+  note?: string;
+  resolvedPhoto?: Buffer;
+}
+
+export const reportFilterSchema = z.object({
+  status: emptyToUndefined(z.enum(REPORT_STATUSES)),
+  parkId: emptyToUndefined(z.string()),
+  overdue: z
+    .enum(["true", "false"])
+    .transform((v) => v === "true")
+    .optional(),
+});
+
+export type ReportFilterInput = z.infer<typeof reportFilterSchema>;

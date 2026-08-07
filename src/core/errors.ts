@@ -26,3 +26,15 @@ export class RateLimitError extends AppError {
     super("RATE_LIMITED", message, 429);
   }
 }
+
+export class ForbiddenError extends AppError {
+  constructor(message: string) {
+    super("FORBIDDEN", message, 403);
+  }
+}
+
+export class TransitionError extends AppError {
+  constructor(message: string) {
+    super("INVALID_TRANSITION", message, 409);
+  }
+}

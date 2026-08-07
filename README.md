@@ -4,10 +4,12 @@ Belediye parklarındaki demirbaşların (bank, oyun grubu, çöp kutusu vb.) dij
 tutan, her demirbaş için benzersiz bir QR etiket üreten ve vatandaşların QR okutarak arıza
 bildirebildiği bir yönetim uygulaması.
 
-Bu depo **Aşama 1 — İskelet, Envanter ve QR** ve **Aşama 2 — Vatandaş Bildirim Akışı** çıktılarını
-içerir: proje iskeleti, veri modeli, demirbaş envanteri (ekleme/düzenleme), A4 yazdırılabilir QR
-etiket sayfası ve QR okutan vatandaşın fotoğraflı arıza bildirimi gönderebildiği akış
-(`/q/[code]` + `POST /api/public/reports`).
+Bu depo **Aşama 1 — İskelet, Envanter ve QR**, **Aşama 2 — Vatandaş Bildirim Akışı** ve
+**Aşama 3 — Personel Paneli ve Döngü Kapanışı** çıktılarını içerir: proje iskeleti, veri modeli,
+demirbaş envanteri (ekleme/düzenleme), A4 yazdırılabilir QR etiket sayfası, QR okutan vatandaşın
+fotoğraflı arıza bildirimi gönderebildiği akış (`/q/[code]` + `POST /api/public/reports`) ve
+personelin giriş yapıp bildirimleri üstlenip kapatabildiği panel (`/giris`, `/panel/bildirimler`,
+oturum çerezi, durum makinesi, `ReportEvent` olay akışı, QR ile kapatma).
 
 ## Kurulum
 
@@ -19,7 +21,17 @@ npm run dev
 ```
 
 `http://localhost:3000/panel/demirbaslar` — 1 park, 35 demirbaş ile dolu envanter listesini
-gösterir.
+gösterir. `http://localhost:3000/panel/bildirimler` — 20 bildirimlik durum/filtre paneline.
+
+## Demo Kullanıcılar
+
+| Rol | Kullanıcı adı | Şifre |
+|---|---|---|
+| Yönetici (`YONETICI`) | `yonetici` | `yonetici123` |
+| Saha Görevlisi (`SAHA_GOREVLISI`) | `personel` | `personel123` |
+
+`YONETICI` demirbaş/park yönetimi ve etiket yazdırmaya yetkilidir; `SAHA_GOREVLISI` yalnızca
+bildirimleri görüp üstlenir/kapatır. `REDDEDILDI` geçişi yalnızca yöneticiye açıktır.
 
 ## Komutlar
 
@@ -42,17 +54,20 @@ Dikey dilim (vertical slice) yaklaşımı:
 ```
 src/
 ├── core/        # evrensel altyapı: db, config, logger, errors
-├── shared/      # 3+ özellik kullanınca buraya taşınır
+├── shared/      # 3+ özellik kullanınca buraya taşınır (ActionState, format)
 ├── features/
-│   └── assets/  # demirbaş envanteri — service/repository/schemas/qr
+│   ├── assets/  # demirbaş envanteri — service/repository/schemas/qr
+│   ├── reports/ # bildirim yaşam döngüsü — durum makinesi, olay akışı
+│   └── auth/    # kimlik doğrulama — bcrypt, jose oturumu, roller
 └── app/         # Next.js App Router: sayfalar + API route'ları
 ```
 
 Katman akışı: `page.tsx` / `route.ts` / `actions.ts` → `service.ts` (iş kuralları) →
 `repository.ts` (yalnızca Prisma sorguları) → `core/db.ts` → Prisma.
 
-Ayrıntılar için [`src/features/assets/README.md`](src/features/assets/README.md) ve
-[`src/features/reports/README.md`](src/features/reports/README.md).
+Ayrıntılar için [`src/features/assets/README.md`](src/features/assets/README.md),
+[`src/features/reports/README.md`](src/features/reports/README.md) ve
+[`src/features/auth/README.md`](src/features/auth/README.md).
 
 ## Prisma 7 / Next.js 16 Tuzakları
 
@@ -90,11 +105,18 @@ kullanımdan belirgin şekilde farklı. Karşılaşılan ve çözülen sorunlar:
   `formData.get()` ile okunur (`POST /api/public/reports`).
 - **SQLite `autoincrement()` non-id alanda desteklenmez.** `Report.ticketNo`, Aşama 1'deki
   `AssetCodeCounter` gibi `ReportCounter` atomik sayacından tahsis edilir.
+- **`forbidden()` deneyseldir.** `next.config.ts` → `experimental.authInterrupts: true`
+  zorunlu; açılmazsa `requireRole` 403 sayfası üretemez.
 
 ## Doğrulama
 
 Etiket sayfası (`/panel/etiketler?parkId=<id>`) yazdırılıp çıktıdaki QR gerçek bir telefonla
 okutulmalı — doğru URL'e gitmeli ve bildirim formunu göstermeli. Servis testleri 100 demirbaşlık
-toplu eklemede kod çakışması olmadığını (`src/features/assets/service.test.ts`) ve tekilleştirme
-+ hız sınırı + fotoğraf boru hattını (`src/features/reports/service.test.ts`,
-`src/features/reports/photos.test.ts`) doğrular.
+toplu eklemede kod çakışması olmadığını (`src/features/assets/service.test.ts`), tekilleştirme
++ hız sınırı + fotoğraf boru hattı ve durum makinesini (`src/features/reports/service.test.ts`,
+`src/features/reports/photos.test.ts`) ve bcrypt + JWT oturumunu
+(`src/features/auth/service.test.ts`, `src/features/auth/session.test.ts`) doğrular.
+
+Personel akışı: `/giris` ile giriş → `/panel/bildirimler` → detayda "Üstlen" → "Onarıldı olarak
+kapat" → demirbaş `AKTIF`'e döner. Girişli personel aynı QR'ı okutunca `/q/[code]` sayfasında
+kapatma formu görür. `SAHA_GOREVLISI` demirbaş yönetim sayfalarına giremez (403).

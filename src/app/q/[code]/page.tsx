@@ -2,8 +2,10 @@ import { redirect } from "next/navigation";
 import * as assetService from "@/features/assets/service";
 import { normalizeAssetCode } from "@/features/assets/codes";
 import { ASSET_TYPE_LABELS } from "@/features/assets/constants";
+import { getCurrentUser } from "@/features/auth/dal";
 import { getOpenReport } from "@/features/reports/service";
 import { ReportForm } from "@/features/reports/components/ReportForm";
+import { CloseReportForm } from "@/features/reports/components/CloseReportForm";
 import { CodeLookupForm } from "@/features/reports/components/CodeLookupForm";
 
 export default async function QPage(props: PageProps<"/q/[code]">) {
@@ -29,7 +31,37 @@ export default async function QPage(props: PageProps<"/q/[code]">) {
     );
   }
 
-  const openReport = await getOpenReport(asset.id);
+  const [openReport, user] = await Promise.all([getOpenReport(asset.id), getCurrentUser()]);
+
+  if (user) {
+    return (
+      <main className="mx-auto flex w-full max-w-lg flex-1 flex-col gap-6 px-6 py-8">
+        <section className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">{asset.park.name}</p>
+          <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+            {ASSET_TYPE_LABELS[asset.type]}
+          </h1>
+          <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+            Kod: <span className="font-mono font-semibold">{asset.code}</span>
+          </p>
+        </section>
+
+        {openReport ? (
+          <CloseReportForm reportId={openReport.id} ticketNo={openReport.ticketNo} />
+        ) : (
+          <section
+            className="rounded-lg border border-zinc-200 p-6 text-center dark:border-zinc-800"
+            role="status"
+            aria-live="polite"
+          >
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              Bu demirbaşta açık bildirim yok.
+            </p>
+          </section>
+        )}
+      </main>
+    );
+  }
 
   return (
     <main className="mx-auto flex w-full max-w-lg flex-1 flex-col gap-6 px-6 py-8">

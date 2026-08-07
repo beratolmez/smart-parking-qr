@@ -3,7 +3,7 @@
 import { useActionState } from "react";
 import type { Park } from "@/generated/prisma/client";
 import { createAssetsAction, updateAssetAction } from "@/features/assets/actions";
-import type { ActionState } from "@/features/assets/types";
+import type { ActionState } from "@/shared/types";
 import type { AssetWithPark } from "@/features/assets/repository";
 import {
   ASSET_STATUS_LABELS,

@@ -1,7 +1,9 @@
 import * as assetService from "@/features/assets/service";
 import { AssetForm } from "@/features/assets/components/AssetForm";
+import { requireRole } from "@/features/auth/dal";
 
 export default async function YeniDemirbasPage() {
+  await requireRole("YONETICI");
   const parks = await assetService.listParks();
 
   return (

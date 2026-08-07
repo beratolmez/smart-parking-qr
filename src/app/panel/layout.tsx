@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { config } from "@/core/config";
+import { requireUser } from "@/features/auth/dal";
+import { logoutAction } from "@/features/auth/actions";
+import { ROLE_LABELS } from "@/features/auth/constants";
 
 const NAV_ITEMS = [
   { href: "/panel", label: "Gösterge Paneli" },
+  { href: "/panel/bildirimler", label: "Bildirimler" },
   { href: "/panel/demirbaslar", label: "Demirbaşlar" },
   { href: "/panel/etiketler", label: "Etiketler" },
 ];
 
-export default function PanelLayout({ children }: LayoutProps<"/panel">) {
-  // TODO Aşama 3: oturum kontrolü
+export default async function PanelLayout({ children }: LayoutProps<"/panel">) {
+  const user = await requireUser();
   return (
     <div className="flex min-h-full flex-col">
       <header className="border-b border-zinc-200 print:hidden dark:border-zinc-800">
@@ -27,6 +31,20 @@ export default function PanelLayout({ children }: LayoutProps<"/panel">) {
               </Link>
             ))}
           </nav>
+          <div className="flex items-center gap-4">
+            <div className="text-right">
+              <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">{user.fullName}</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">{ROLE_LABELS[user.role]}</p>
+            </div>
+            <form action={logoutAction}>
+              <button
+                type="submit"
+                className="rounded-full border border-zinc-300 px-4 py-1.5 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-900"
+              >
+                Çıkış
+              </button>
+            </form>
+          </div>
         </div>
       </header>
       <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-8">{children}</main>

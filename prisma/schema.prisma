@@ -38,24 +38,50 @@ model Asset {
 }
 
 model Report {
-  id             String       @id @default(cuid())
-  ticketNo       Int          @unique
-  asset          Asset        @relation(fields: [assetId], references: [id])
+  id             String        @id @default(cuid())
+  ticketNo       Int           @unique
+  asset          Asset         @relation(fields: [assetId], references: [id])
   assetId        String
   issueType      IssueType
   description    String?
   photoUrl       String
-  reporterType   ReporterType @default(VATANDAS)
+  reporterType   ReporterType  @default(VATANDAS)
   reporterPhone  String?
-  status         ReportStatus @default(YENI)
-  duplicateCount Int          @default(1)
+  status         ReportStatus  @default(YENI)
+  duplicateCount Int           @default(1)
   resolutionNote String?
   resolvedPhoto  String?
-  createdAt      DateTime     @default(now())
+  createdAt      DateTime      @default(now())
   closedAt       DateTime?
+  events         ReportEvent[]
 
   @@index([assetId, status])
   @@index([status, createdAt])
+}
+
+model User {
+  id           String        @id @default(cuid())
+  username     String        @unique
+  passwordHash String
+  fullName     String
+  role         Role
+  events       ReportEvent[]
+  createdAt    DateTime      @default(now())
+}
+
+model ReportEvent {
+  id         String        @id @default(cuid())
+  report     Report        @relation(fields: [reportId], references: [id])
+  reportId   String
+  fromStatus ReportStatus?
+  toStatus   ReportStatus
+  note       String?
+  actor      User?         @relation(fields: [actorId], references: [id])
+  actorId    String?
+  createdAt  DateTime      @default(now())
+
+  @@index([reportId])
+  @@index([actorId])
 }
 
 /// Kod tahsisinde yarış koşulunu engelleyen atomik sayaç.
@@ -109,4 +135,9 @@ enum ReportStatus {
 enum ReporterType {
   VATANDAS
   PERSONEL
+}
+
+enum Role {
+  SAHA_GOREVLISI
+  YONETICI
 }

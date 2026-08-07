@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
 import * as assetService from "@/features/assets/service";
 import { AssetForm } from "@/features/assets/components/AssetForm";
+import { requireRole } from "@/features/auth/dal";
 import { NotFoundError } from "@/core/errors";
 
 export default async function DuzenlePage(props: PageProps<"/panel/demirbaslar/[id]/duzenle">) {
+  await requireRole("YONETICI");
   const { id } = await props.params;
 
   const [asset, parks] = await Promise.all([

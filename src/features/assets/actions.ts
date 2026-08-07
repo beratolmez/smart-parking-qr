@@ -5,12 +5,14 @@ import { z } from "zod";
 import { AppError } from "@/core/errors";
 import { createAssetsSchema, updateAssetSchema } from "@/features/assets/schemas";
 import * as assetService from "@/features/assets/service";
-import type { ActionState } from "@/features/assets/types";
+import { requireRole } from "@/features/auth/dal";
+import type { ActionState } from "@/shared/types";
 
 export async function createAssetsAction(
   _prev: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
+  await requireRole("YONETICI");
   const parsed = createAssetsSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) {
     return { ok: false, fieldErrors: z.flattenError(parsed.error).fieldErrors };
@@ -32,6 +34,7 @@ export async function updateAssetAction(
   _prev: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
+  await requireRole("YONETICI");
   const id = formData.get("id");
   if (typeof id !== "string" || !id) return { ok: false, message: "Geçersiz istek." };
 
@@ -54,6 +57,7 @@ export async function archiveAssetAction(
   _prev: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
+  await requireRole("YONETICI");
   const id = formData.get("id");
   if (typeof id !== "string" || !id) return { ok: false, message: "Geçersiz istek." };
   try {

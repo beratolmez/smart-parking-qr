@@ -1,9 +1,11 @@
 import * as assetService from "@/features/assets/service";
 import { LabelSheet } from "@/features/assets/components/LabelSheet";
 import { PrintButton } from "@/features/assets/components/PrintButton";
+import { requireRole } from "@/features/auth/dal";
 import { EmptyState } from "@/shared/ui/EmptyState";
 
 export default async function EtiketlerPage(props: PageProps<"/panel/etiketler">) {
+  await requireRole("YONETICI");
   const searchParams = await props.searchParams;
   const rawIds = searchParams.ids;
   const rawParkId = searchParams.parkId;

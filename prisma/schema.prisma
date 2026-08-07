@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Park {
+  id        String   @id @default(cuid())
+  name      String
+  district  String
+  latitude  Float?
+  longitude Float?
+  assets    Asset[]
+  createdAt DateTime @default(now())
+}
+
+model Asset {
+  id          String      @id @default(cuid())
+  code        String      @unique
+  type        AssetType
+  park        Park        @relation(fields: [parkId], references: [id])
+  parkId      String
+  label       String?
+  latitude    Float?
+  longitude   Float?
+  brand       String?
+  installedAt DateTime?
+  status      AssetStatus @default(AKTIF)
+  photoUrl    String?
+  reports     Report[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([parkId, status])
+}
+
+model Report {
+  id             String       @id @default(cuid())
+  ticketNo       Int          @unique
+  asset          Asset        @relation(fields: [assetId], references: [id])
+  assetId        String
+  issueType      IssueType
+  description    String?
+  photoUrl       String
+  reporterType   ReporterType @default(VATANDAS)
+  reporterPhone  String?
+  status         ReportStatus @default(YENI)
+  duplicateCount Int          @default(1)
+  resolutionNote String?
+  resolvedPhoto  String?
+  createdAt      DateTime     @default(now())
+  closedAt       DateTime?
+
+  @@index([assetId, status])
+  @@index([status, createdAt])
+}
+
+/// Kod tahsisinde yarış koşulunu engelleyen atomik sayaç.
+model AssetCodeCounter {
+  type      AssetType @id
+  lastValue Int       @default(0)
+}
+
+/// Bildirim takip numarası tahsisinde yarış koşulunu engelleyen atomik sayaç.
+model ReportCounter {
+  id        Int @id @default(1)
+  lastValue Int @default(0)
+}
+
+enum AssetType {
+  BANK
+  OYUN_GRUBU
+  SALINCAK
+  KAYDIRAK
+  TAHTEREVALLI
+  SPOR_ALETI
+  COP_KUTUSU
+  AYDINLATMA
+  CESME
+  DIGER
+}
+
+enum AssetStatus {
+  AKTIF
+  ARIZALI
+  BAKIMDA
+  HURDA
+}
+
+enum IssueType {
+  KIRIK_HASARLI
+  KIRLI
+  BOYA_DOKUNTU
+  TEHLIKELI
+  EKSIK_CALINMIS
+  DIGER
+}
+
+enum ReportStatus {
+  YENI
+  ATANDI
+  ONARILDI
+  REDDEDILDI
+}
+
+enum ReporterType {
+  VATANDAS
+  PERSONEL
+}

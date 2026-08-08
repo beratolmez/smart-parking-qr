@@ -1,0 +1,15 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - heading "ParkTakip" [level=1] [ref=e3]
+    - paragraph [ref=e4]: Park demirbaşlarının dijital envanteri ve QR etiket yönetimi.
+    - generic [ref=e5]:
+      - heading "Kod ile bildir" [level=2] [ref=e6]
+      - generic [ref=e7]:
+        - generic [ref=e8]: Demirbaş kodu
+        - textbox "Demirbaş kodu" [ref=e9]:
+          - /placeholder: Örn. BANK-0147
+        - button "Bildir" [ref=e10]
+      - paragraph [ref=e11]: Etiketinizdeki kodu yazın — örn. BANK-0147
+    - link "Yönetim Paneline Git" [ref=e12] [cursor=pointer]:
+      - /url: /panel
+  - button "Open Next.js Dev Tools" [ref=e18] [cursor=pointer]

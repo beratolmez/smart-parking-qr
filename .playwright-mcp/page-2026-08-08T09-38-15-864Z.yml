@@ -1,0 +1,17 @@
+- generic [active] [ref=f4e1]:
+  - main [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - heading "Personel Girişi" [level=1] [ref=f4e4]
+      - paragraph [ref=f4e5]: Panel erişimi için kullanıcı adı ve şifrenizle giriş yapın.
+    - generic [ref=f4e7]:
+      - generic [ref=f4e8]:
+        - generic [ref=f4e9]: Kullanıcı adı
+        - textbox "Kullanıcı adı" [ref=f4e10]
+      - generic [ref=f4e11]:
+        - generic [ref=f4e12]: Şifre
+        - textbox "Şifre" [ref=f4e13]
+      - button "Giriş Yap" [ref=f4e14]
+    - link "Ana sayfaya dön" [ref=f4e15] [cursor=pointer]:
+      - /url: /
+  - button "Open Next.js Dev Tools" [ref=f4e21] [cursor=pointer]
+  - alert [ref=f4e25]

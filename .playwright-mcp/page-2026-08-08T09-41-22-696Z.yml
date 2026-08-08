@@ -1,0 +1,24 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - banner [ref=f11e3]:
+      - generic [ref=f11e4]:
+        - generic [ref=f11e5]: Örnek Belediyesi
+        - navigation "Panel gezinme" [ref=f11e6]:
+          - link "Gösterge Paneli" [ref=f11e7] [cursor=pointer]:
+            - /url: /panel
+          - link "Bildirimler" [ref=f11e8] [cursor=pointer]:
+            - /url: /panel/bildirimler
+          - link "Demirbaşlar" [ref=f11e9] [cursor=pointer]:
+            - /url: /panel/demirbaslar
+          - link "Etiketler" [ref=f11e10] [cursor=pointer]:
+            - /url: /panel/etiketler
+        - generic [ref=f11e11]:
+          - generic [ref=f11e12]:
+            - paragraph [ref=f11e13]: Yönetici
+            - paragraph [ref=f11e14]: Yönetici
+          - button "Çıkış" [ref=f11e16]
+    - main [ref=f11e17]:
+      - generic [ref=f11e18]:
+        - heading "Etiketler" [level=1] [ref=f11e20]
+        - paragraph [ref=f11e22]: Yazdırılacak demirbaş bulunamadı.
+  - button "Open Next.js Dev Tools" [ref=f11e28] [cursor=pointer]

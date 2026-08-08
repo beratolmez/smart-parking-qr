@@ -1,0 +1,13 @@
+- generic [active] [ref=f3e1]:
+  - main [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - paragraph [ref=f3e4]: Cumhuriyet Parkı
+      - heading "Bank" [level=1] [ref=f3e5]
+      - paragraph [ref=f3e6]: "Kod: BANK-0003"
+    - status [ref=f3e48]:
+      - paragraph [ref=f3e49]: "#54"
+      - paragraph [ref=f3e50]: Bildiriminiz Park ve Bahçeler Müdürlüğü'ne iletildi.
+      - paragraph [ref=f3e51]: Takip numaranızı kaydedin; bildiriminizin durumunu bu numara ile sorgulayabilirsiniz.
+      - button "Başka bir sorun bildir" [ref=f3e52]
+  - button "Open Next.js Dev Tools" [ref=f3e42] [cursor=pointer]
+  - alert [ref=f3e46]

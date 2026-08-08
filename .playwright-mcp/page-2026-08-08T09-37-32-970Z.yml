@@ -1,0 +1,46 @@
+- generic [ref=f3e1]:
+  - main [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - paragraph [ref=f3e4]: Cumhuriyet Parkı
+      - heading "Bank" [level=1] [ref=f3e5]
+      - paragraph [ref=f3e6]: "Kod: BANK-0003"
+    - generic [ref=f3e8]:
+      - group "Sorun türü" [ref=f3e9]:
+        - generic [ref=f3e11]:
+          - generic [ref=f3e12] [cursor=pointer]:
+            - radio "Kırık / Hasarlı" [ref=f3e13]
+            - text: Kırık / Hasarlı
+          - generic [ref=f3e14] [cursor=pointer]:
+            - radio "Kirli" [checked] [active] [ref=f3e15]
+            - text: Kirli
+          - generic [ref=f3e16] [cursor=pointer]:
+            - radio "Boya Döküntüsü" [ref=f3e17]
+            - text: Boya Döküntüsü
+          - generic [ref=f3e18] [cursor=pointer]:
+            - radio "Tehlikeli" [ref=f3e19]
+            - text: Tehlikeli
+          - generic [ref=f3e20] [cursor=pointer]:
+            - radio "Eksik / Çalınmış" [ref=f3e21]
+            - text: Eksik / Çalınmış
+          - generic [ref=f3e22] [cursor=pointer]:
+            - radio "Diğer" [ref=f3e23]
+            - text: Diğer
+      - generic [ref=f3e24]:
+        - generic [ref=f3e25]: Açıklama (isteğe bağlı)
+        - textbox "Açıklama (isteğe bağlı)" [ref=f3e26]:
+          - /placeholder: Sorunu kısaca açıklayın
+      - generic [ref=f3e27]:
+        - generic [ref=f3e28]: Telefon (isteğe bağlı)
+        - textbox "Telefon (isteğe bağlı)" [ref=f3e29]:
+          - /placeholder: 05XX XXX XX XX
+        - paragraph [ref=f3e30]: Yalnızca bu bildirimin sonucuyla ilgili sizi bilgilendirmek için kullanılır.
+      - generic [ref=f3e31]:
+        - generic [ref=f3e32]: Fotoğraf *
+        - button "Fotoğraf *" [ref=f3e33]
+      - paragraph [ref=f3e34]:
+        - text: Fotoğraf ve isteğe bağlı telefon bilginiz yalnızca bu bildirim için kullanılır.
+        - link "Aydınlatma metni için tıklayın." [ref=f3e35] [cursor=pointer]:
+          - /url: /kvkk
+      - button "Bildir" [ref=f3e36]
+  - button "Open Next.js Dev Tools" [ref=f3e42] [cursor=pointer]
+  - alert [ref=f3e46]

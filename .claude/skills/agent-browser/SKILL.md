@@ -19,7 +19,7 @@ agent-browser install
 
 **Platform notes:**
 - **macOS/Linux**: Works natively after install.
-- **Windows**: Has a [known issue](https://github.com/vercel-labs/agent-browser/issues/56) with Unix domain sockets. Use WSL as a workaround, or run from a Linux container.
+- **Windows**: Has a [known issue](https://github.com/vercel-labs/agent-browser/issues/56) with Unix domain sockets. Use WSL as a workaround, or run from a Linux container. **Verified 2026-08:** even when commands produce output (e.g. `get title`), the CLI process hangs and must be killed — unusable in automated shell workflows on Windows. **Prefer Playwright MCP** (global `~/.config/opencode/opencode.jsonc` → `playwright` / `playwright-mobile` servers) for Windows E2E work.
 - **Docker/CI**: Install in the image with the two commands above.
 
 ## Core workflow

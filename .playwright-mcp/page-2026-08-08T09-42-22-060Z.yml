@@ -1,0 +1,648 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e2]:
+    - banner [ref=f13e3]:
+      - generic [ref=f13e4]:
+        - generic [ref=f13e5]: Örnek Belediyesi
+        - navigation "Panel gezinme" [ref=f13e6]:
+          - link "Gösterge Paneli" [ref=f13e7] [cursor=pointer]:
+            - /url: /panel
+          - link "Bildirimler" [ref=f13e8] [cursor=pointer]:
+            - /url: /panel/bildirimler
+          - link "Demirbaşlar" [ref=f13e9] [cursor=pointer]:
+            - /url: /panel/demirbaslar
+          - link "Etiketler" [ref=f13e10] [cursor=pointer]:
+            - /url: /panel/etiketler
+        - generic [ref=f13e11]:
+          - generic [ref=f13e12]:
+            - paragraph [ref=f13e13]: Yönetici
+            - paragraph [ref=f13e14]: Yönetici
+          - button "Çıkış" [ref=f13e16]
+    - main [ref=f13e17]:
+      - generic [ref=f13e18]:
+        - heading "Bildirimler" [level=1] [ref=f13e19]
+        - generic [ref=f13e20]:
+          - generic [ref=f13e21]:
+            - generic [ref=f13e22]: Durum
+            - combobox "Durum" [ref=f13e23]:
+              - option "Tümü" [selected]
+              - option "Yeni"
+              - option "Atandı"
+              - option "Onarıldı"
+              - option "Reddedildi"
+          - generic [ref=f13e24]:
+            - generic [ref=f13e25]: Park
+            - combobox "Park" [ref=f13e26]:
+              - option "Tümü" [selected]
+              - option "Atatürk Parkı"
+              - option "Cumhuriyet Parkı"
+          - generic [ref=f13e27]:
+            - checkbox "Gecikenler (7+ gün)" [ref=f13e28]
+            - text: Gecikenler (7+ gün)
+          - button "Filtrele" [ref=f13e29]
+        - table [ref=f13e31]:
+          - rowgroup [ref=f13e32]:
+            - row [ref=f13e33]:
+              - columnheader "Takip No" [ref=f13e34]
+              - columnheader "Demirbaş" [ref=f13e35]
+              - columnheader "Park" [ref=f13e36]
+              - columnheader "Sorun" [ref=f13e37]
+              - columnheader "Durum" [ref=f13e38]
+              - columnheader "Tekrar" [ref=f13e39]
+              - columnheader "Gecikme" [ref=f13e40]
+              - columnheader "Tarih" [ref=f13e41]
+          - rowgroup [ref=f13e42]:
+            - row [ref=f13e43]:
+              - cell [ref=f13e44]:
+                - link "#54" [ref=f13e45] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsk6klhj000090twu9cnbhby
+              - cell "BANK-0003Bank" [ref=f13e46]
+              - cell "Cumhuriyet Parkı" [ref=f13e47]
+              - cell "Kirli" [ref=f13e48]
+              - cell "Yeni" [ref=f13e49]
+              - cell [ref=f13e51]
+              - cell [ref=f13e52]
+              - cell "8 Ağu 2026" [ref=f13e53]
+            - row [ref=f13e54]:
+              - cell [ref=f13e55]:
+                - link "#7" [ref=f13e56] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jw8001ej0twmz2ml5av
+              - cell "OYUN-0001Oyun Grubu" [ref=f13e57]
+              - cell "Cumhuriyet Parkı" [ref=f13e58]
+              - cell "Kırık / Hasarlı" [ref=f13e59]
+              - cell "Atandı" [ref=f13e60]
+              - cell [ref=f13e62]
+              - cell [ref=f13e63]
+              - cell "6 Ağu 2026" [ref=f13e64]
+            - row [ref=f13e65]:
+              - cell [ref=f13e66]:
+                - link "#1" [ref=f13e67] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jnd0018j0twrib824te
+              - cell "BANK-0001Bank" [ref=f13e68]
+              - cell "Cumhuriyet Parkı" [ref=f13e69]
+              - cell "Kırık / Hasarlı" [ref=f13e70]
+              - cell "Yeni" [ref=f13e71]
+              - cell "2 kişi bildirdi" [ref=f13e73]
+              - cell [ref=f13e75]
+              - cell "6 Ağu 2026" [ref=f13e76]
+            - row [ref=f13e77]:
+              - cell [ref=f13e78]:
+                - link "#49" [ref=f13e79] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mtx004rj0twezazd42a
+              - cell "COPK-0007Çöp Kutusu" [ref=f13e80]
+              - cell "Atatürk Parkı" [ref=f13e81]
+              - cell "Kirli" [ref=f13e82]
+              - cell "Onarıldı" [ref=f13e83]
+              - cell [ref=f13e85]
+              - cell [ref=f13e86]
+              - cell "5 Ağu 2026" [ref=f13e87]
+            - row [ref=f13e88]:
+              - cell [ref=f13e89]:
+                - link "#2" [ref=f13e90] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jor0019j0twusepvimo
+              - cell "SALN-0001Salıncak" [ref=f13e91]
+              - cell "Cumhuriyet Parkı" [ref=f13e92]
+              - cell "Kırık / Hasarlı" [ref=f13e93]
+              - cell "Yeni" [ref=f13e94]
+              - cell "2 kişi bildirdi" [ref=f13e96]
+              - cell [ref=f13e98]
+              - cell "5 Ağu 2026" [ref=f13e99]
+            - row [ref=f13e100]:
+              - cell [ref=f13e101]:
+                - link "#48" [ref=f13e102] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mrh004oj0tw9ognrxnx
+              - cell "BANK-0003Bank" [ref=f13e103]
+              - cell "Cumhuriyet Parkı" [ref=f13e104]
+              - cell "Boya Döküntüsü" [ref=f13e105]
+              - cell "Onarıldı" [ref=f13e106]
+              - cell [ref=f13e108]
+              - cell [ref=f13e109]
+              - cell "4 Ağu 2026" [ref=f13e110]
+            - row [ref=f13e111]:
+              - cell [ref=f13e112]:
+                - link "#3" [ref=f13e113] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jq9001aj0tw662avnju
+              - cell "COPK-0001Çöp Kutusu" [ref=f13e114]
+              - cell "Cumhuriyet Parkı" [ref=f13e115]
+              - cell "Kirli" [ref=f13e116]
+              - cell "Yeni" [ref=f13e117]
+              - cell [ref=f13e119]
+              - cell [ref=f13e120]
+              - cell "4 Ağu 2026" [ref=f13e121]
+            - row [ref=f13e122]:
+              - cell [ref=f13e123]:
+                - link "#47" [ref=f13e124] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mow004lj0twsts2ig84
+              - cell "SALN-0004Salıncak" [ref=f13e125]
+              - cell "Atatürk Parkı" [ref=f13e126]
+              - cell "Kirli" [ref=f13e127]
+              - cell "Onarıldı" [ref=f13e128]
+              - cell [ref=f13e130]
+              - cell [ref=f13e131]
+              - cell "3 Ağu 2026" [ref=f13e132]
+            - row [ref=f13e133]:
+              - cell [ref=f13e134]:
+                - link "#8" [ref=f13e135] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jxz001gj0tws1wp9bga
+              - cell "AYDN-0001Aydınlatma" [ref=f13e136]
+              - cell "Cumhuriyet Parkı" [ref=f13e137]
+              - cell "Diğer" [ref=f13e138]
+              - cell "Atandı" [ref=f13e139]
+              - cell [ref=f13e141]
+              - cell [ref=f13e142]
+              - cell "3 Ağu 2026" [ref=f13e143]
+            - row [ref=f13e144]:
+              - cell [ref=f13e145]:
+                - link "#46" [ref=f13e146] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mmi004ij0twshzm5v5p
+              - cell "OYUN-0001Oyun Grubu" [ref=f13e147]
+              - cell "Cumhuriyet Parkı" [ref=f13e148]
+              - cell "Kırık / Hasarlı" [ref=f13e149]
+              - cell "Onarıldı" [ref=f13e150]
+              - cell [ref=f13e152]
+              - cell [ref=f13e153]
+              - cell "2 Ağu 2026" [ref=f13e154]
+            - row [ref=f13e155]:
+              - cell [ref=f13e156]:
+                - link "#4" [ref=f13e157] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jrt001bj0twczk3lf00
+              - cell "KAYD-0003Kaydırak" [ref=f13e158]
+              - cell "Atatürk Parkı" [ref=f13e159]
+              - cell "Kırık / Hasarlı" [ref=f13e160]
+              - cell "Yeni" [ref=f13e161]
+              - cell [ref=f13e163]
+              - cell [ref=f13e164]
+              - cell "2 Ağu 2026" [ref=f13e165]
+            - row [ref=f13e166]:
+              - cell [ref=f13e167]:
+                - link "#45" [ref=f13e168] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mk5004fj0tw8jsd2jjt
+              - cell "BANK-0015Bank" [ref=f13e169]
+              - cell "Atatürk Parkı" [ref=f13e170]
+              - cell "Kırık / Hasarlı" [ref=f13e171]
+              - cell "Onarıldı" [ref=f13e172]
+              - cell [ref=f13e174]
+              - cell [ref=f13e175]
+              - cell "1 Ağu 2026" [ref=f13e176]
+            - row [ref=f13e177]:
+              - cell [ref=f13e178]:
+                - link "#5" [ref=f13e179] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jtd001cj0twom7y879d
+              - cell "KAYD-0001Kaydırak" [ref=f13e180]
+              - cell "Cumhuriyet Parkı" [ref=f13e181]
+              - cell "Boya Döküntüsü" [ref=f13e182]
+              - cell "Yeni" [ref=f13e183]
+              - cell [ref=f13e185]
+              - cell "Gecikti" [ref=f13e186]
+              - cell "30 Tem 2026" [ref=f13e188]
+            - row [ref=f13e189]:
+              - cell [ref=f13e190]:
+                - link "#44" [ref=f13e191] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mho004cj0twi1az28c8
+              - cell "THTR-0001Tahterevalli" [ref=f13e192]
+              - cell "Cumhuriyet Parkı" [ref=f13e193]
+              - cell "Kırık / Hasarlı" [ref=f13e194]
+              - cell "Onarıldı" [ref=f13e195]
+              - cell [ref=f13e197]
+              - cell [ref=f13e198]
+              - cell "29 Tem 2026" [ref=f13e199]
+            - row [ref=f13e200]:
+              - cell [ref=f13e201]:
+                - link "#9" [ref=f13e202] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jzq001ij0twe7581k3r
+              - cell "CSME-0001Çeşme" [ref=f13e203]
+              - cell "Cumhuriyet Parkı" [ref=f13e204]
+              - cell "Kırık / Hasarlı" [ref=f13e205]
+              - cell "Atandı" [ref=f13e206]
+              - cell [ref=f13e208]
+              - cell "Gecikti" [ref=f13e209]
+              - cell "29 Tem 2026" [ref=f13e211]
+            - row [ref=f13e212]:
+              - cell [ref=f13e213]:
+                - link "#43" [ref=f13e214] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mf10049j0tw82fbby9o
+              - cell "SALN-0001Salıncak" [ref=f13e215]
+              - cell "Cumhuriyet Parkı" [ref=f13e216]
+              - cell "Kırık / Hasarlı" [ref=f13e217]
+              - cell "Onarıldı" [ref=f13e218]
+              - cell [ref=f13e220]
+              - cell [ref=f13e221]
+              - cell "26 Tem 2026" [ref=f13e222]
+            - row [ref=f13e223]:
+              - cell [ref=f13e224]:
+                - link "#6" [ref=f13e225] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68jur001dj0tw2cqkd3cx
+              - cell "SPOR-0001Spor Aleti" [ref=f13e226]
+              - cell "Cumhuriyet Parkı" [ref=f13e227]
+              - cell "Tehlikeli" [ref=f13e228]
+              - cell "Yeni" [ref=f13e229]
+              - cell [ref=f13e231]
+              - cell "Gecikti" [ref=f13e232]
+              - cell "26 Tem 2026" [ref=f13e234]
+            - row [ref=f13e235]:
+              - cell [ref=f13e236]:
+                - link "#10" [ref=f13e237] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68k1g001kj0twuvy65dln
+              - cell "BANK-0002Bank" [ref=f13e238]
+              - cell "Cumhuriyet Parkı" [ref=f13e239]
+              - cell "Kirli" [ref=f13e240]
+              - cell "Atandı" [ref=f13e241]
+              - cell [ref=f13e243]
+              - cell "Gecikti" [ref=f13e244]
+              - cell "24 Tem 2026" [ref=f13e246]
+            - row [ref=f13e247]:
+              - cell [ref=f13e248]:
+                - link "#42" [ref=f13e249] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mck0046j0twa52viqpr
+              - cell "BANK-0009Bank" [ref=f13e250]
+              - cell "Cumhuriyet Parkı" [ref=f13e251]
+              - cell "Kırık / Hasarlı" [ref=f13e252]
+              - cell "Onarıldı" [ref=f13e253]
+              - cell [ref=f13e255]
+              - cell [ref=f13e256]
+              - cell "23 Tem 2026" [ref=f13e257]
+            - row [ref=f13e258]:
+              - cell [ref=f13e259]:
+                - link "#11" [ref=f13e260] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68k36001mj0twuw27otl5
+              - cell "THTR-0001Tahterevalli" [ref=f13e261]
+              - cell "Cumhuriyet Parkı" [ref=f13e262]
+              - cell "Tehlikeli" [ref=f13e263]
+              - cell "Atandı" [ref=f13e264]
+              - cell [ref=f13e266]
+              - cell "Gecikti" [ref=f13e267]
+              - cell "22 Tem 2026" [ref=f13e269]
+            - row [ref=f13e270]:
+              - cell [ref=f13e271]:
+                - link "#41" [ref=f13e272] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68ma30043j0twcyqsdxmm
+              - cell "SPOR-0003Spor Aleti" [ref=f13e273]
+              - cell "Cumhuriyet Parkı" [ref=f13e274]
+              - cell "Boya Döküntüsü" [ref=f13e275]
+              - cell "Onarıldı" [ref=f13e276]
+              - cell [ref=f13e278]
+              - cell [ref=f13e279]
+              - cell "20 Tem 2026" [ref=f13e280]
+            - row [ref=f13e281]:
+              - cell [ref=f13e282]:
+                - link "#40" [ref=f13e283] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68m7k0040j0tw6wzlticx
+              - cell "COPK-0006Çöp Kutusu" [ref=f13e284]
+              - cell "Cumhuriyet Parkı" [ref=f13e285]
+              - cell "Kirli" [ref=f13e286]
+              - cell "Onarıldı" [ref=f13e287]
+              - cell [ref=f13e289]
+              - cell [ref=f13e290]
+              - cell "17 Tem 2026" [ref=f13e291]
+            - row [ref=f13e292]:
+              - cell [ref=f13e293]:
+                - link "#39" [ref=f13e294] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68m54003xj0twof825t0y
+              - cell "KAYD-0001Kaydırak" [ref=f13e295]
+              - cell "Cumhuriyet Parkı" [ref=f13e296]
+              - cell "Kırık / Hasarlı" [ref=f13e297]
+              - cell "Onarıldı" [ref=f13e298]
+              - cell [ref=f13e300]
+              - cell [ref=f13e301]
+              - cell "14 Tem 2026" [ref=f13e302]
+            - row [ref=f13e303]:
+              - cell [ref=f13e304]:
+                - link "#38" [ref=f13e305] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68m2c003uj0twx3kd546u
+              - cell "COPK-0003Çöp Kutusu" [ref=f13e306]
+              - cell "Cumhuriyet Parkı" [ref=f13e307]
+              - cell "Kirli" [ref=f13e308]
+              - cell "Onarıldı" [ref=f13e309]
+              - cell [ref=f13e311]
+              - cell [ref=f13e312]
+              - cell "8 Tem 2026" [ref=f13e313]
+            - row [ref=f13e314]:
+              - cell [ref=f13e315]:
+                - link "#37" [ref=f13e316] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lzx003rj0twq415lrvh
+              - cell "AYDN-0001Aydınlatma" [ref=f13e317]
+              - cell "Cumhuriyet Parkı" [ref=f13e318]
+              - cell "Diğer" [ref=f13e319]
+              - cell "Onarıldı" [ref=f13e320]
+              - cell [ref=f13e322]
+              - cell [ref=f13e323]
+              - cell "5 Tem 2026" [ref=f13e324]
+            - row [ref=f13e325]:
+              - cell [ref=f13e326]:
+                - link "#36" [ref=f13e327] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lx6003oj0tw8uz6kcym
+              - cell "BANK-0001Bank" [ref=f13e328]
+              - cell "Cumhuriyet Parkı" [ref=f13e329]
+              - cell "Kırık / Hasarlı" [ref=f13e330]
+              - cell "Onarıldı" [ref=f13e331]
+              - cell [ref=f13e333]
+              - cell [ref=f13e334]
+              - cell "3 Tem 2026" [ref=f13e335]
+            - row [ref=f13e336]:
+              - cell [ref=f13e337]:
+                - link "#35" [ref=f13e338] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lui003lj0twehv9n06p
+              - cell "SALN-0001Salıncak" [ref=f13e339]
+              - cell "Cumhuriyet Parkı" [ref=f13e340]
+              - cell "Kırık / Hasarlı" [ref=f13e341]
+              - cell "Onarıldı" [ref=f13e342]
+              - cell [ref=f13e344]
+              - cell [ref=f13e345]
+              - cell "26 Haz 2026" [ref=f13e346]
+            - row [ref=f13e347]:
+              - cell [ref=f13e348]:
+                - link "#53" [ref=f13e349] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68n170050j0twbltvbmxx
+              - cell "SPOR-0004Spor Aleti" [ref=f13e350]
+              - cell "Cumhuriyet Parkı" [ref=f13e351]
+              - cell "Eksik / Çalınmış" [ref=f13e352]
+              - cell "Reddedildi" [ref=f13e353]
+              - cell [ref=f13e355]
+              - cell [ref=f13e356]
+              - cell "23 Haz 2026" [ref=f13e357]
+            - row [ref=f13e358]:
+              - cell [ref=f13e359]:
+                - link "#34" [ref=f13e360] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lr9003ij0twvh2bci3a
+              - cell "BANK-0008Bank" [ref=f13e361]
+              - cell "Cumhuriyet Parkı" [ref=f13e362]
+              - cell "Diğer" [ref=f13e363]
+              - cell "Onarıldı" [ref=f13e364]
+              - cell [ref=f13e366]
+              - cell [ref=f13e367]
+              - cell "20 Haz 2026" [ref=f13e368]
+            - row [ref=f13e369]:
+              - cell [ref=f13e370]:
+                - link "#33" [ref=f13e371] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lno003fj0twapvrue09
+              - cell "AYDN-0002Aydınlatma" [ref=f13e372]
+              - cell "Cumhuriyet Parkı" [ref=f13e373]
+              - cell "Diğer" [ref=f13e374]
+              - cell "Onarıldı" [ref=f13e375]
+              - cell [ref=f13e377]
+              - cell [ref=f13e378]
+              - cell "18 Haz 2026" [ref=f13e379]
+            - row [ref=f13e380]:
+              - cell [ref=f13e381]:
+                - link "#32" [ref=f13e382] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68ll7003cj0tw8edvutrk
+              - cell "BANK-0016Bank" [ref=f13e383]
+              - cell "Atatürk Parkı" [ref=f13e384]
+              - cell "Kirli" [ref=f13e385]
+              - cell "Onarıldı" [ref=f13e386]
+              - cell [ref=f13e388]
+              - cell [ref=f13e389]
+              - cell "13 Haz 2026" [ref=f13e390]
+            - row [ref=f13e391]:
+              - cell [ref=f13e392]:
+                - link "#31" [ref=f13e393] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lip0039j0tw7j8tuqeu
+              - cell "BANK-0002Bank" [ref=f13e394]
+              - cell "Cumhuriyet Parkı" [ref=f13e395]
+              - cell "Kirli" [ref=f13e396]
+              - cell "Onarıldı" [ref=f13e397]
+              - cell [ref=f13e399]
+              - cell [ref=f13e400]
+              - cell "10 Haz 2026" [ref=f13e401]
+            - row [ref=f13e402]:
+              - cell [ref=f13e403]:
+                - link "#30" [ref=f13e404] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lg50036j0twz5adqxtl
+              - cell "KAYD-0002Kaydırak" [ref=f13e405]
+              - cell "Cumhuriyet Parkı" [ref=f13e406]
+              - cell "Kırık / Hasarlı" [ref=f13e407]
+              - cell "Onarıldı" [ref=f13e408]
+              - cell [ref=f13e410]
+              - cell [ref=f13e411]
+              - cell "8 Haz 2026" [ref=f13e412]
+            - row [ref=f13e413]:
+              - cell [ref=f13e414]:
+                - link "#29" [ref=f13e415] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68ldk0033j0tw1r2inkf5
+              - cell "OYUN-0001Oyun Grubu" [ref=f13e416]
+              - cell "Cumhuriyet Parkı" [ref=f13e417]
+              - cell "Kırık / Hasarlı" [ref=f13e418]
+              - cell "Onarıldı" [ref=f13e419]
+              - cell [ref=f13e421]
+              - cell [ref=f13e422]
+              - cell "3 Haz 2026" [ref=f13e423]
+            - row [ref=f13e424]:
+              - cell [ref=f13e425]:
+                - link "#52" [ref=f13e426] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mzf004yj0twf76zdmtx
+              - cell "COPK-0007Çöp Kutusu" [ref=f13e427]
+              - cell "Atatürk Parkı" [ref=f13e428]
+              - cell "Diğer" [ref=f13e429]
+              - cell "Reddedildi" [ref=f13e430]
+              - cell [ref=f13e432]
+              - cell [ref=f13e433]
+              - cell "29 May 2026" [ref=f13e434]
+            - row [ref=f13e435]:
+              - cell [ref=f13e436]:
+                - link "#28" [ref=f13e437] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68lb00030j0tw95ifhawa
+              - cell "SALN-0001Salıncak" [ref=f13e438]
+              - cell "Cumhuriyet Parkı" [ref=f13e439]
+              - cell "Kırık / Hasarlı" [ref=f13e440]
+              - cell "Onarıldı" [ref=f13e441]
+              - cell [ref=f13e443]
+              - cell [ref=f13e444]
+              - cell "27 May 2026" [ref=f13e445]
+            - row [ref=f13e446]:
+              - cell [ref=f13e447]:
+                - link "#51" [ref=f13e448] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mxp004wj0twjnfbutn1
+              - cell "CSME-0001Çeşme" [ref=f13e449]
+              - cell "Cumhuriyet Parkı" [ref=f13e450]
+              - cell "Tehlikeli" [ref=f13e451]
+              - cell "Reddedildi" [ref=f13e452]
+              - cell [ref=f13e454]
+              - cell [ref=f13e455]
+              - cell "24 May 2026" [ref=f13e456]
+            - row [ref=f13e457]:
+              - cell [ref=f13e458]:
+                - link "#27" [ref=f13e459] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68l8e002xj0twbk4a2eey
+              - cell "CSME-0001Çeşme" [ref=f13e460]
+              - cell "Cumhuriyet Parkı" [ref=f13e461]
+              - cell "Diğer" [ref=f13e462]
+              - cell "Onarıldı" [ref=f13e463]
+              - cell [ref=f13e465]
+              - cell [ref=f13e466]
+              - cell "19 May 2026" [ref=f13e467]
+            - row [ref=f13e468]:
+              - cell [ref=f13e469]:
+                - link "#26" [ref=f13e470] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68l5k002uj0twbo2px4i4
+              - cell "BANK-0007Bank" [ref=f13e471]
+              - cell "Cumhuriyet Parkı" [ref=f13e472]
+              - cell "Kirli" [ref=f13e473]
+              - cell "Onarıldı" [ref=f13e474]
+              - cell [ref=f13e476]
+              - cell [ref=f13e477]
+              - cell "14 May 2026" [ref=f13e478]
+            - row [ref=f13e479]:
+              - cell [ref=f13e480]:
+                - link "#25" [ref=f13e481] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68l34002rj0tw9t8j97q7
+              - cell "KAYD-0001Kaydırak" [ref=f13e482]
+              - cell "Cumhuriyet Parkı" [ref=f13e483]
+              - cell "Tehlikeli" [ref=f13e484]
+              - cell "Onarıldı" [ref=f13e485]
+              - cell [ref=f13e487]
+              - cell [ref=f13e488]
+              - cell "11 May 2026" [ref=f13e489]
+            - row [ref=f13e490]:
+              - cell [ref=f13e491]:
+                - link "#24" [ref=f13e492] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68l0m002oj0twws4zcr7m
+              - cell "SALN-0004Salıncak" [ref=f13e493]
+              - cell "Atatürk Parkı" [ref=f13e494]
+              - cell "Kırık / Hasarlı" [ref=f13e495]
+              - cell "Onarıldı" [ref=f13e496]
+              - cell [ref=f13e498]
+              - cell [ref=f13e499]
+              - cell "9 May 2026" [ref=f13e500]
+            - row [ref=f13e501]:
+              - cell [ref=f13e502]:
+                - link "#23" [ref=f13e503] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68ky8002lj0two7ueog9i
+              - cell "BANK-0001Bank" [ref=f13e504]
+              - cell "Cumhuriyet Parkı" [ref=f13e505]
+              - cell "Boya Döküntüsü" [ref=f13e506]
+              - cell "Onarıldı" [ref=f13e507]
+              - cell [ref=f13e509]
+              - cell [ref=f13e510]
+              - cell "4 May 2026" [ref=f13e511]
+            - row [ref=f13e512]:
+              - cell [ref=f13e513]:
+                - link "#22" [ref=f13e514] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kvk002ij0twwg4a4pvg
+              - cell "OYUN-0002Oyun Grubu" [ref=f13e515]
+              - cell "Cumhuriyet Parkı" [ref=f13e516]
+              - cell "Boya Döküntüsü" [ref=f13e517]
+              - cell "Onarıldı" [ref=f13e518]
+              - cell [ref=f13e520]
+              - cell [ref=f13e521]
+              - cell "1 May 2026" [ref=f13e522]
+            - row [ref=f13e523]:
+              - cell [ref=f13e524]:
+                - link "#50" [ref=f13e525] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68mvq004uj0twtjrolspk
+              - cell "COPK-0004Çöp Kutusu" [ref=f13e526]
+              - cell "Cumhuriyet Parkı" [ref=f13e527]
+              - cell "Diğer" [ref=f13e528]
+              - cell "Reddedildi" [ref=f13e529]
+              - cell [ref=f13e531]
+              - cell [ref=f13e532]
+              - cell "29 Nis 2026" [ref=f13e533]
+            - row [ref=f13e534]:
+              - cell [ref=f13e535]:
+                - link "#21" [ref=f13e536] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kt1002fj0twgdz97t8s
+              - cell "SPOR-0002Spor Aleti" [ref=f13e537]
+              - cell "Cumhuriyet Parkı" [ref=f13e538]
+              - cell "Boya Döküntüsü" [ref=f13e539]
+              - cell "Onarıldı" [ref=f13e540]
+              - cell [ref=f13e542]
+              - cell [ref=f13e543]
+              - cell "24 Nis 2026" [ref=f13e544]
+            - row [ref=f13e545]:
+              - cell [ref=f13e546]:
+                - link "#20" [ref=f13e547] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kqh002cj0tw87d4glrm
+              - cell "SPOR-0001Spor Aleti" [ref=f13e548]
+              - cell "Cumhuriyet Parkı" [ref=f13e549]
+              - cell "Kırık / Hasarlı" [ref=f13e550]
+              - cell "Onarıldı" [ref=f13e551]
+              - cell [ref=f13e553]
+              - cell [ref=f13e554]
+              - cell "19 Nis 2026" [ref=f13e555]
+            - row [ref=f13e556]:
+              - cell [ref=f13e557]:
+                - link "#19" [ref=f13e558] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68knl0029j0twn9u0v9qy
+              - cell "SALN-0001Salıncak" [ref=f13e559]
+              - cell "Cumhuriyet Parkı" [ref=f13e560]
+              - cell "Kırık / Hasarlı" [ref=f13e561]
+              - cell "Onarıldı" [ref=f13e562]
+              - cell [ref=f13e564]
+              - cell [ref=f13e565]
+              - cell "17 Nis 2026" [ref=f13e566]
+            - row [ref=f13e567]:
+              - cell [ref=f13e568]:
+                - link "#18" [ref=f13e569] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kl20026j0tw3livin4z
+              - cell "OYUN-0001Oyun Grubu" [ref=f13e570]
+              - cell "Cumhuriyet Parkı" [ref=f13e571]
+              - cell "Kırık / Hasarlı" [ref=f13e572]
+              - cell "Onarıldı" [ref=f13e573]
+              - cell [ref=f13e575]
+              - cell [ref=f13e576]
+              - cell "9 Nis 2026" [ref=f13e577]
+            - row [ref=f13e578]:
+              - cell [ref=f13e579]:
+                - link "#17" [ref=f13e580] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kih0023j0twiwepyru6
+              - cell "BANK-0006Bank" [ref=f13e581]
+              - cell "Cumhuriyet Parkı" [ref=f13e582]
+              - cell "Kırık / Hasarlı" [ref=f13e583]
+              - cell "Onarıldı" [ref=f13e584]
+              - cell [ref=f13e586]
+              - cell [ref=f13e587]
+              - cell "1 Nis 2026" [ref=f13e588]
+            - row [ref=f13e589]:
+              - cell [ref=f13e590]:
+                - link "#16" [ref=f13e591] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kft0020j0twsr6b3b6i
+              - cell "COPK-0002Çöp Kutusu" [ref=f13e592]
+              - cell "Cumhuriyet Parkı" [ref=f13e593]
+              - cell "Kirli" [ref=f13e594]
+              - cell "Onarıldı" [ref=f13e595]
+              - cell [ref=f13e597]
+              - cell [ref=f13e598]
+              - cell "28 Mar 2026" [ref=f13e599]
+            - row [ref=f13e600]:
+              - cell [ref=f13e601]:
+                - link "#15" [ref=f13e602] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kd9001xj0twx3h4lqyq
+              - cell "BANK-0001Bank" [ref=f13e603]
+              - cell "Cumhuriyet Parkı" [ref=f13e604]
+              - cell "Kırık / Hasarlı" [ref=f13e605]
+              - cell "Onarıldı" [ref=f13e606]
+              - cell [ref=f13e608]
+              - cell [ref=f13e609]
+              - cell "20 Mar 2026" [ref=f13e610]
+            - row [ref=f13e611]:
+              - cell [ref=f13e612]:
+                - link "#14" [ref=f13e613] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68kas001uj0tw392c8m54
+              - cell "COPK-0005Çöp Kutusu" [ref=f13e614]
+              - cell "Cumhuriyet Parkı" [ref=f13e615]
+              - cell "Kirli" [ref=f13e616]
+              - cell "Onarıldı" [ref=f13e617]
+              - cell [ref=f13e619]
+              - cell [ref=f13e620]
+              - cell "12 Mar 2026" [ref=f13e621]
+            - row [ref=f13e622]:
+              - cell [ref=f13e623]:
+                - link "#13" [ref=f13e624] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68k8a001rj0twy2xxu2pi
+              - cell "SALN-0001Salıncak" [ref=f13e625]
+              - cell "Cumhuriyet Parkı" [ref=f13e626]
+              - cell "Kırık / Hasarlı" [ref=f13e627]
+              - cell "Onarıldı" [ref=f13e628]
+              - cell [ref=f13e630]
+              - cell [ref=f13e631]
+              - cell "10 Mar 2026" [ref=f13e632]
+            - row [ref=f13e633]:
+              - cell [ref=f13e634]:
+                - link "#12" [ref=f13e635] [cursor=pointer]:
+                  - /url: /panel/bildirimler/cmsj68k5p001oj0twjcn3rtwk
+              - cell "BANK-0005Bank" [ref=f13e636]
+              - cell "Cumhuriyet Parkı" [ref=f13e637]
+              - cell "Kırık / Hasarlı" [ref=f13e638]
+              - cell "Onarıldı" [ref=f13e639]
+              - cell [ref=f13e641]
+              - cell [ref=f13e642]
+              - cell "28 Şub 2026" [ref=f13e643]
+  - button "Open Next.js Dev Tools" [ref=f13e649] [cursor=pointer]

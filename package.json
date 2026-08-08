@@ -14,7 +14,9 @@
     "db:seed": "prisma db seed",
     "db:reset": "prisma migrate reset --force",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "lan-ip": "node scripts/lan-ip.mjs",
+    "demo:firewall": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/demo-firewall.ps1"
   },
   "dependencies": {
     "@prisma/adapter-better-sqlite3": "^7.9.1",

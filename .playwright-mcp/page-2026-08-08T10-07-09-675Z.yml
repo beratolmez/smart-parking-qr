@@ -1,0 +1,84 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - banner [ref=f21e3]:
+      - generic [ref=f21e4]:
+        - generic [ref=f21e5]: Örnek Belediyesi
+        - navigation "Panel gezinme" [ref=f21e6]:
+          - link "Gösterge Paneli" [ref=f21e7] [cursor=pointer]:
+            - /url: /panel
+          - link "Bildirimler" [ref=f21e8] [cursor=pointer]:
+            - /url: /panel/bildirimler
+          - link "Demirbaşlar" [ref=f21e9] [cursor=pointer]:
+            - /url: /panel/demirbaslar
+          - link "Etiketler" [ref=f21e10] [cursor=pointer]:
+            - /url: /panel/etiketler
+        - generic [ref=f21e11]:
+          - generic [ref=f21e12]:
+            - paragraph [ref=f21e13]: Saha Personeli
+            - paragraph [ref=f21e14]: Saha Görevlisi
+          - button "Çıkış" [ref=f21e16]
+    - main [ref=f21e17]:
+      - generic [ref=f21e18]:
+        - generic [ref=f21e19]:
+          - generic [ref=f21e20]:
+            - heading "#1" [level=1] [ref=f21e21]
+            - generic [ref=f21e22]: Yeni
+            - generic [ref=f21e23]: 2 kişi bildirdi
+          - paragraph [ref=f21e24]: "Oluşturulma: 6 Ağu 2026"
+        - figure "Bildirim" [ref=f21e26]:
+          - img "Bildirim fotoğrafı" [ref=f21e27]
+        - generic [ref=f21e29]:
+          - heading "Demirbaş" [level=2] [ref=f21e30]
+          - generic [ref=f21e31]:
+            - generic [ref=f21e32]:
+              - term [ref=f21e33]: Kod
+              - definition [ref=f21e34]: BANK-0001
+            - generic [ref=f21e35]:
+              - term [ref=f21e36]: Tür
+              - definition [ref=f21e37]: Bank
+            - generic [ref=f21e38]:
+              - term [ref=f21e39]: Park
+              - definition [ref=f21e40]: Cumhuriyet Parkı
+            - generic [ref=f21e41]:
+              - term [ref=f21e42]: Durum
+              - definition [ref=f21e43]: Arızalı
+        - generic [ref=f21e44]:
+          - heading "Açıklama" [level=2] [ref=f21e45]
+          - paragraph [ref=f21e46]: Bankın sol ayağı kırılmış, oturulamıyor.
+        - generic [ref=f21e47]:
+          - heading "Bu demirbaş için son 12 ayda 4 bildirim" [level=2] [ref=f21e48]
+          - list [ref=f21e49]:
+            - listitem [ref=f21e50]:
+              - generic [ref=f21e51]: 6 Ağu 2026
+              - generic [ref=f21e52]: Kırık / Hasarlı
+              - generic [ref=f21e53]: Yeni
+            - listitem [ref=f21e54]:
+              - generic [ref=f21e55]: 3 Tem 2026
+              - generic [ref=f21e56]: Kırık / Hasarlı
+              - generic [ref=f21e57]: Onarıldı
+            - listitem [ref=f21e58]:
+              - generic [ref=f21e59]: 4 May 2026
+              - generic [ref=f21e60]: Boya Döküntüsü
+              - generic [ref=f21e61]: Onarıldı
+            - listitem [ref=f21e62]:
+              - generic [ref=f21e63]: 20 Mar 2026
+              - generic [ref=f21e64]: Kırık / Hasarlı
+              - generic [ref=f21e65]: Onarıldı
+        - generic [ref=f21e66]:
+          - heading "Olay Akışı" [level=2] [ref=f21e67]
+          - paragraph [ref=f21e68]: Henüz olay kaydı yok — bildirim Yeni durumunda.
+        - generic [ref=f21e69]:
+          - heading "Durum Güncelle" [level=2] [ref=f21e70]
+          - generic [ref=f21e71]:
+            - generic [ref=f21e72]: Yeni durum
+            - combobox "Yeni durum" [ref=f21e73]:
+              - option "Atandı" [selected]
+          - generic [ref=f21e74]:
+            - generic [ref=f21e75]: Not (isteğe bağlı)
+            - textbox "Not (isteğe bağlı)" [ref=f21e76]:
+              - /placeholder: Yapılan işlemi kısaca açıklayın
+          - generic [ref=f21e77]:
+            - generic [ref=f21e78]: Fotoğraf (isteğe bağlı)
+            - button "Fotoğraf (isteğe bağlı)" [ref=f21e79]
+          - button "Güncelle" [ref=f21e80]
+  - button "Open Next.js Dev Tools" [ref=f21e86] [cursor=pointer]

@@ -11,7 +11,15 @@ sayı `npm run db:seed` çıktısıyla (2 park, 40 demirbaş, 53 bildirim) bireb
 - [ ] Temiz makinede `npm install && npm run db:seed && npm run dev` çalışıyor
       (veritabanı sıfırdan kurulur; `http://localhost:3000` açılır)
 - [ ] Telefon aynı Wi-Fi ağında; telefonun tarayıcısı `http://<makine-IP>:3000`'e erişebiliyor
-      (localhost değil — makinenin LAN IP'si)
+      (localhost değil — makinenin LAN IP'si). README "Telefonla Canlı Demo" bölümündeki adımlar
+      uygulanmış: `npm run lan-ip` ile IP öğrenildi, `.env` içinde `APP_URL` LAN IP yapıldı ve dev
+      sunucusu yeniden başlatıldı, yönetici PowerShell'de `npm run demo:firewall` çalıştırıldı
+      (Public ağdaysa `-Profile Any`). Telefonla açınca **sorun türü seçilebiliyor** olmalı —
+      seçilemiyorsa dev asset'leri 403 alıyor demektir (`allowedDevOrigins` `next.config.ts`'te
+      `APP_URL`'den türetilir; `.env` değiştiyse sunucuyu yeniden başlat)
+- [ ] Etiketler `APP_URL` değişikliğinden SONRA yeniden yazdırıldı (eski basılmış etiketler
+      localhost URL'i gömülü içerir — QR'lar render anında üretilir, yeniden yazdırma yeni URL'i
+      otomatik gömler)
 - [ ] `/panel/etiketler?parkId=<Cumhuriyet Parkı id>` adresi yazdırılmış fiziksel etiket
       (örnek çıktı: `screenshots/asama4-etiket-ornegi.png`; yazdırma düzeni orada doğrulandı)
 - [ ] Yedek plan: ekran kaydı başlatıldı (QR okutma canlı yapılamazsa kayıttan gösterilir);

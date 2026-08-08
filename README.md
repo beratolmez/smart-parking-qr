@@ -36,6 +36,30 @@ gösterir. `http://localhost:3000/panel/bildirimler` — 53 bildirimlik durum/fi
 `YONETICI` demirbaş/park yönetimi ve etiket yazdırmaya yetkilidir; `SAHA_GOREVLISI` yalnızca
 bildirimleri görüp üstlenir/kapatır. `REDDEDILDI` geçişi yalnızca yöneticiye açıktır.
 
+## Telefonla Canlı Demo (QR Okutma)
+
+Sunum senaryosunun canlı QR okutma diliminin çalışması için QR içeriğinin **makinenin LAN
+IP'siyle** üretilmesi gerekir. `APP_URL` `http://localhost:3000` kalırsa telefon, QR okutunca
+kendi localhost'una gitmeye çalışır ("bağlanmayı reddetti") — ağ değil, QR içeriği sorunu.
+
+1. `npm run lan-ip` → LAN IP'yi kopyala (VPN/WSL sanal adaptörleri çıkarsa `--all` ile adayları
+   listele ve gerçek Wi-Fi/Ethernet adresini seç)
+2. `.env` içinde `APP_URL`'i `http://<LAN-IP>:3000` yap ve **dev sunucusunu yeniden başlat**
+   (config import anında okunur; hot reload güvenilmez)
+3. Yönetici PowerShell'de `npm run demo:firewall` — Genel (Public) ağdaysa
+   `npm run demo:firewall -- -Profile Any`
+4. `npm run dev` → telefonla aynı Wi-Fi'da `http://<LAN-IP>:3000` erişimini doğrula
+5. `/panel/etiketler` sayfasını açıp **etiketleri yeniden yazdır** — eski basılmış etiketler
+   localhost URL'i gömülü taşır, QR'lar render anında üretildiğinden yeniden yazdırma yeni URL'i
+   otomatik gömülür
+6. Yedek akış: etiket yeniden basılamıyorsa ana sayfa "Kod ile bildir" kutusu (UH-8) ile kod elle
+   girilir
+
+> **Not:** Telefon tarayıcısından gelen dev-only asset istekleri Next.js tarafından 403 ile
+> engellenebiliyordu (React hydrate olamıyor, form tepkisiz kalıyordu). `next.config.ts`'te
+> `allowedDevOrigins` artık `APP_URL`'den otomatik türetiliyor — `.env`'de IP değişince elle
+> güncelleme gerekmez. Yalnızca dev modunda etkilidir; production'da etkisi yoktur.
+
 ## Komutlar
 
 | Komut | Açıklama |
@@ -49,6 +73,8 @@ bildirimleri görüp üstlenir/kapatır. `REDDEDILDI` geçişi yalnızca yöneti
 | `npm run db:seed` | Demo verisini yükler (idempotent) |
 | `npm run db:reset` | Veritabanını sıfırlar ve yeniden migrate eder |
 | `npm test` | Vitest test paketini çalıştırır |
+| `npm run lan-ip` | Makinenin LAN IPv4 adresini gösterir (`--all` tüm adayları listeler) |
+| `npm run demo:firewall` | Windows Firewall'da TCP 3000 inbound kuralını açar (yönetici gerekir) |
 
 ## Mimari Özeti
 

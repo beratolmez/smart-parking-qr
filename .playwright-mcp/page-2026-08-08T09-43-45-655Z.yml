@@ -1,0 +1,75 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - banner [ref=f15e3]:
+      - generic [ref=f15e4]:
+        - generic [ref=f15e5]: Örnek Belediyesi
+        - navigation "Panel gezinme" [ref=f15e6]:
+          - link "Gösterge Paneli" [ref=f15e7] [cursor=pointer]:
+            - /url: /panel
+          - link "Bildirimler" [ref=f15e8] [cursor=pointer]:
+            - /url: /panel/bildirimler
+          - link "Demirbaşlar" [ref=f15e9] [cursor=pointer]:
+            - /url: /panel/demirbaslar
+          - link "Etiketler" [ref=f15e10] [cursor=pointer]:
+            - /url: /panel/etiketler
+        - generic [ref=f15e11]:
+          - generic [ref=f15e12]:
+            - paragraph [ref=f15e13]: Saha Personeli
+            - paragraph [ref=f15e14]: Saha Görevlisi
+          - button "Çıkış" [ref=f15e16]
+    - main [ref=f15e17]:
+      - generic [ref=f15e18]:
+        - generic [ref=f15e19]:
+          - generic [ref=f15e20]:
+            - heading "#54" [level=1] [ref=f15e21]
+            - generic [ref=f15e22]: Yeni
+          - paragraph [ref=f15e23]: "Oluşturulma: 8 Ağu 2026"
+        - figure "Bildirim" [ref=f15e25]:
+          - img "Bildirim fotoğrafı" [ref=f15e26]
+        - generic [ref=f15e28]:
+          - heading "Demirbaş" [level=2] [ref=f15e29]
+          - generic [ref=f15e30]:
+            - generic [ref=f15e31]:
+              - term [ref=f15e32]: Kod
+              - definition [ref=f15e33]: BANK-0003
+            - generic [ref=f15e34]:
+              - term [ref=f15e35]: Tür
+              - definition [ref=f15e36]: Bank
+            - generic [ref=f15e37]:
+              - term [ref=f15e38]: Park
+              - definition [ref=f15e39]: Cumhuriyet Parkı
+            - generic [ref=f15e40]:
+              - term [ref=f15e41]: Durum
+              - definition [ref=f15e42]: Arızalı
+        - generic [ref=f15e43]:
+          - heading "Açıklama" [level=2] [ref=f15e44]
+          - paragraph [ref=f15e45]: "E2E: yeni bildirim — bank üzerinde boya ve çöp var."
+        - generic [ref=f15e46]:
+          - heading "Bu demirbaş için son 12 ayda 2 bildirim" [level=2] [ref=f15e47]
+          - list [ref=f15e48]:
+            - listitem [ref=f15e49]:
+              - generic [ref=f15e50]: 8 Ağu 2026
+              - generic [ref=f15e51]: Kirli
+              - generic [ref=f15e52]: Yeni
+            - listitem [ref=f15e53]:
+              - generic [ref=f15e54]: 4 Ağu 2026
+              - generic [ref=f15e55]: Boya Döküntüsü
+              - generic [ref=f15e56]: Onarıldı
+        - generic [ref=f15e57]:
+          - heading "Olay Akışı" [level=2] [ref=f15e58]
+          - paragraph [ref=f15e59]: Henüz olay kaydı yok — bildirim Yeni durumunda.
+        - generic [ref=f15e60]:
+          - heading "Durum Güncelle" [level=2] [ref=f15e61]
+          - generic [ref=f15e62]:
+            - generic [ref=f15e63]: Yeni durum
+            - combobox "Yeni durum" [ref=f15e64]:
+              - option "Atandı" [selected]
+          - generic [ref=f15e65]:
+            - generic [ref=f15e66]: Not (isteğe bağlı)
+            - textbox "Not (isteğe bağlı)" [ref=f15e67]:
+              - /placeholder: Yapılan işlemi kısaca açıklayın
+          - generic [ref=f15e68]:
+            - generic [ref=f15e69]: Fotoğraf (isteğe bağlı)
+            - button "Fotoğraf (isteğe bağlı)" [ref=f15e70]
+          - button "Güncelle" [ref=f15e71]
+  - button "Open Next.js Dev Tools" [ref=f15e77] [cursor=pointer]

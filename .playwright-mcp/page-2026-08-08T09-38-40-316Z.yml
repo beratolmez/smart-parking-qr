@@ -1,0 +1,587 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - banner [ref=f5e3]:
+      - generic [ref=f5e4]:
+        - generic [ref=f5e5]: Örnek Belediyesi
+        - navigation "Panel gezinme" [ref=f5e6]:
+          - link "Gösterge Paneli" [ref=f5e7] [cursor=pointer]:
+            - /url: /panel
+          - link "Bildirimler" [ref=f5e8] [cursor=pointer]:
+            - /url: /panel/bildirimler
+          - link "Demirbaşlar" [ref=f5e9] [cursor=pointer]:
+            - /url: /panel/demirbaslar
+          - link "Etiketler" [ref=f5e10] [cursor=pointer]:
+            - /url: /panel/etiketler
+        - generic [ref=f5e11]:
+          - generic [ref=f5e12]:
+            - paragraph [ref=f5e13]: Yönetici
+            - paragraph [ref=f5e14]: Yönetici
+          - button "Çıkış" [ref=f5e16]
+    - main [ref=f5e17]:
+      - generic [ref=f5e18]:
+        - generic [ref=f5e19]:
+          - heading "Demirbaşlar" [level=1] [ref=f5e20]
+          - link "Yeni Demirbaş Ekle" [ref=f5e21] [cursor=pointer]:
+            - /url: /panel/demirbaslar/yeni
+        - generic [ref=f5e22]:
+          - generic [ref=f5e23]:
+            - generic [ref=f5e24]: Park
+            - combobox "Park" [ref=f5e25]:
+              - option "Tümü" [selected]
+              - option "Atatürk Parkı"
+              - option "Cumhuriyet Parkı"
+          - generic [ref=f5e26]:
+            - generic [ref=f5e27]: Tür
+            - combobox "Tür" [ref=f5e28]:
+              - option "Tümü" [selected]
+              - option "Bank"
+              - option "Oyun Grubu"
+              - option "Salıncak"
+              - option "Kaydırak"
+              - option "Tahterevalli"
+              - option "Spor Aleti"
+              - option "Çöp Kutusu"
+              - option "Aydınlatma"
+              - option "Çeşme"
+              - option "Diğer"
+          - generic [ref=f5e29]:
+            - generic [ref=f5e30]: Durum
+            - combobox "Durum" [ref=f5e31]:
+              - option "Tümü" [selected]
+              - option "Aktif"
+              - option "Arızalı"
+              - option "Bakımda"
+              - option "Hurda"
+          - button "Filtrele" [ref=f5e32]
+        - table [ref=f5e34]:
+          - rowgroup [ref=f5e35]:
+            - row [ref=f5e36]:
+              - columnheader "Kod" [ref=f5e37]
+              - columnheader "Tür" [ref=f5e38]
+              - columnheader "Park" [ref=f5e39]
+              - columnheader "Etiket" [ref=f5e40]
+              - columnheader "Durum" [ref=f5e41]
+              - columnheader "Montaj" [ref=f5e42]
+              - columnheader "İşlemler" [ref=f5e43]
+          - rowgroup [ref=f5e44]:
+            - row [ref=f5e45]:
+              - cell "AYDN-0001" [ref=f5e46]
+              - cell "Aydınlatma" [ref=f5e47]
+              - cell "Cumhuriyet Parkı" [ref=f5e48]
+              - cell "—" [ref=f5e49]
+              - cell "Arızalı" [ref=f5e50]
+              - cell "22 Ara 2025" [ref=f5e51]
+              - cell [ref=f5e52]:
+                - generic [ref=f5e53]:
+                  - link "Düzenle" [ref=f5e54] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iwf000wj0twaakd20qm/duzenle
+                  - link "QR indir" [ref=f5e55] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iwf000wj0twaakd20qm/qr
+            - row [ref=f5e56]:
+              - cell "AYDN-0002" [ref=f5e57]
+              - cell "Aydınlatma" [ref=f5e58]
+              - cell "Cumhuriyet Parkı" [ref=f5e59]
+              - cell "—" [ref=f5e60]
+              - cell "Aktif" [ref=f5e61]
+              - cell "25 Eyl 2025" [ref=f5e62]
+              - cell [ref=f5e63]:
+                - generic [ref=f5e64]:
+                  - link "Düzenle" [ref=f5e65] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iwf000xj0twz54hftlc/duzenle
+                  - link "QR indir" [ref=f5e66] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iwf000xj0twz54hftlc/qr
+            - row [ref=f5e67]:
+              - cell "BANK-0001" [ref=f5e68]
+              - cell "Bank" [ref=f5e69]
+              - cell "Cumhuriyet Parkı" [ref=f5e70]
+              - cell "—" [ref=f5e71]
+              - cell "Arızalı" [ref=f5e72]
+              - cell "5 May 2025" [ref=f5e73]
+              - cell [ref=f5e74]:
+                - generic [ref=f5e75]:
+                  - link "Düzenle" [ref=f5e76] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihy0001j0tw2rudpvpu/duzenle
+                  - link "QR indir" [ref=f5e77] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihy0001j0tw2rudpvpu/qr
+            - row [ref=f5e78]:
+              - cell "BANK-0002" [ref=f5e79]
+              - cell "Bank" [ref=f5e80]
+              - cell "Cumhuriyet Parkı" [ref=f5e81]
+              - cell "—" [ref=f5e82]
+              - cell "Arızalı" [ref=f5e83]
+              - cell "7 Eki 2024" [ref=f5e84]
+              - cell [ref=f5e85]:
+                - generic [ref=f5e86]:
+                  - link "Düzenle" [ref=f5e87] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihy0002j0tw9n3yi73t/duzenle
+                  - link "QR indir" [ref=f5e88] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihy0002j0tw9n3yi73t/qr
+            - row [ref=f5e89]:
+              - cell "BANK-0003" [ref=f5e90]
+              - cell "Bank" [ref=f5e91]
+              - cell "Cumhuriyet Parkı" [ref=f5e92]
+              - cell "—" [ref=f5e93]
+              - cell "Arızalı" [ref=f5e94]
+              - cell "8 Eyl 2024" [ref=f5e95]
+              - cell [ref=f5e96]:
+                - generic [ref=f5e97]:
+                  - link "Düzenle" [ref=f5e98] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihy0003j0twv1tw80ta/duzenle
+                  - link "QR indir" [ref=f5e99] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihy0003j0twv1tw80ta/qr
+            - row [ref=f5e100]:
+              - cell "BANK-0004" [ref=f5e101]
+              - cell "Bank" [ref=f5e102]
+              - cell "Cumhuriyet Parkı" [ref=f5e103]
+              - cell "—" [ref=f5e104]
+              - cell "Aktif" [ref=f5e105]
+              - cell "2 Eki 2025" [ref=f5e106]
+              - cell [ref=f5e107]:
+                - generic [ref=f5e108]:
+                  - link "Düzenle" [ref=f5e109] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0004j0tw2smt1gx1/duzenle
+                  - link "QR indir" [ref=f5e110] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0004j0tw2smt1gx1/qr
+            - row [ref=f5e111]:
+              - cell "BANK-0005" [ref=f5e112]
+              - cell "Bank" [ref=f5e113]
+              - cell "Cumhuriyet Parkı" [ref=f5e114]
+              - cell "—" [ref=f5e115]
+              - cell "Aktif" [ref=f5e116]
+              - cell "13 Eyl 2025" [ref=f5e117]
+              - cell [ref=f5e118]:
+                - generic [ref=f5e119]:
+                  - link "Düzenle" [ref=f5e120] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0005j0twpt0hhboz/duzenle
+                  - link "QR indir" [ref=f5e121] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0005j0twpt0hhboz/qr
+            - row [ref=f5e122]:
+              - cell "BANK-0006" [ref=f5e123]
+              - cell "Bank" [ref=f5e124]
+              - cell "Cumhuriyet Parkı" [ref=f5e125]
+              - cell "—" [ref=f5e126]
+              - cell "Aktif" [ref=f5e127]
+              - cell "18 Tem 2024" [ref=f5e128]
+              - cell [ref=f5e129]:
+                - generic [ref=f5e130]:
+                  - link "Düzenle" [ref=f5e131] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0006j0tw96eq7x7a/duzenle
+                  - link "QR indir" [ref=f5e132] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0006j0tw96eq7x7a/qr
+            - row [ref=f5e133]:
+              - cell "BANK-0007" [ref=f5e134]
+              - cell "Bank" [ref=f5e135]
+              - cell "Cumhuriyet Parkı" [ref=f5e136]
+              - cell "—" [ref=f5e137]
+              - cell "Aktif" [ref=f5e138]
+              - cell "21 Şub 2024" [ref=f5e139]
+              - cell [ref=f5e140]:
+                - generic [ref=f5e141]:
+                  - link "Düzenle" [ref=f5e142] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0007j0tw3w7grt1s/duzenle
+                  - link "QR indir" [ref=f5e143] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0007j0tw3w7grt1s/qr
+            - row [ref=f5e144]:
+              - cell "BANK-0008" [ref=f5e145]
+              - cell "Bank" [ref=f5e146]
+              - cell "Cumhuriyet Parkı" [ref=f5e147]
+              - cell "—" [ref=f5e148]
+              - cell "Aktif" [ref=f5e149]
+              - cell "24 May 2025" [ref=f5e150]
+              - cell [ref=f5e151]:
+                - generic [ref=f5e152]:
+                  - link "Düzenle" [ref=f5e153] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0008j0twag04jbqo/duzenle
+                  - link "QR indir" [ref=f5e154] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0008j0twag04jbqo/qr
+            - row [ref=f5e155]:
+              - cell "BANK-0009" [ref=f5e156]
+              - cell "Bank" [ref=f5e157]
+              - cell "Cumhuriyet Parkı" [ref=f5e158]
+              - cell "—" [ref=f5e159]
+              - cell "Aktif" [ref=f5e160]
+              - cell "27 Ara 2025" [ref=f5e161]
+              - cell [ref=f5e162]:
+                - generic [ref=f5e163]:
+                  - link "Düzenle" [ref=f5e164] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz0009j0tw4oz8jg55/duzenle
+                  - link "QR indir" [ref=f5e165] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz0009j0tw4oz8jg55/qr
+            - row [ref=f5e166]:
+              - cell "BANK-0010" [ref=f5e167]
+              - cell "Bank" [ref=f5e168]
+              - cell "Cumhuriyet Parkı" [ref=f5e169]
+              - cell "—" [ref=f5e170]
+              - cell "Aktif" [ref=f5e171]
+              - cell "27 Eki 2023" [ref=f5e172]
+              - cell [ref=f5e173]:
+                - generic [ref=f5e174]:
+                  - link "Düzenle" [ref=f5e175] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz000aj0tws8ambogd/duzenle
+                  - link "QR indir" [ref=f5e176] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz000aj0tws8ambogd/qr
+            - row [ref=f5e177]:
+              - cell "BANK-0011" [ref=f5e178]
+              - cell "Bank" [ref=f5e179]
+              - cell "Cumhuriyet Parkı" [ref=f5e180]
+              - cell "—" [ref=f5e181]
+              - cell "Aktif" [ref=f5e182]
+              - cell "2 Ara 2025" [ref=f5e183]
+              - cell [ref=f5e184]:
+                - generic [ref=f5e185]:
+                  - link "Düzenle" [ref=f5e186] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz000bj0tw4i4zo5r2/duzenle
+                  - link "QR indir" [ref=f5e187] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz000bj0tw4i4zo5r2/qr
+            - row [ref=f5e188]:
+              - cell "BANK-0012" [ref=f5e189]
+              - cell "Bank" [ref=f5e190]
+              - cell "Cumhuriyet Parkı" [ref=f5e191]
+              - cell "—" [ref=f5e192]
+              - cell "Aktif" [ref=f5e193]
+              - cell "6 Mar 2026" [ref=f5e194]
+              - cell [ref=f5e195]:
+                - generic [ref=f5e196]:
+                  - link "Düzenle" [ref=f5e197] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz000cj0twi89b1u9l/duzenle
+                  - link "QR indir" [ref=f5e198] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz000cj0twi89b1u9l/qr
+            - row [ref=f5e199]:
+              - cell "BANK-0013" [ref=f5e200]
+              - cell "Bank" [ref=f5e201]
+              - cell "Cumhuriyet Parkı" [ref=f5e202]
+              - cell "—" [ref=f5e203]
+              - cell "Aktif" [ref=f5e204]
+              - cell "27 Kas 2023" [ref=f5e205]
+              - cell [ref=f5e206]:
+                - generic [ref=f5e207]:
+                  - link "Düzenle" [ref=f5e208] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz000dj0twil6l6lcj/duzenle
+                  - link "QR indir" [ref=f5e209] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz000dj0twil6l6lcj/qr
+            - row [ref=f5e210]:
+              - cell "BANK-0014" [ref=f5e211]
+              - cell "Bank" [ref=f5e212]
+              - cell "Cumhuriyet Parkı" [ref=f5e213]
+              - cell "—" [ref=f5e214]
+              - cell "Aktif" [ref=f5e215]
+              - cell "4 Ara 2023" [ref=f5e216]
+              - cell [ref=f5e217]:
+                - generic [ref=f5e218]:
+                  - link "Düzenle" [ref=f5e219] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ihz000ej0tw65d1ediv/duzenle
+                  - link "QR indir" [ref=f5e220] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ihz000ej0tw65d1ediv/qr
+            - row [ref=f5e221]:
+              - cell "BANK-0015" [ref=f5e222]
+              - cell "Bank" [ref=f5e223]
+              - cell "Atatürk Parkı" [ref=f5e224]
+              - cell "—" [ref=f5e225]
+              - cell "Aktif" [ref=f5e226]
+              - cell "23 Eki 2025" [ref=f5e227]
+              - cell [ref=f5e228]:
+                - generic [ref=f5e229]:
+                  - link "Düzenle" [ref=f5e230] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68izi0011j0twlhejv165/duzenle
+                  - link "QR indir" [ref=f5e231] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68izi0011j0twlhejv165/qr
+            - row [ref=f5e232]:
+              - cell "BANK-0016" [ref=f5e233]
+              - cell "Bank" [ref=f5e234]
+              - cell "Atatürk Parkı" [ref=f5e235]
+              - cell "—" [ref=f5e236]
+              - cell "Aktif" [ref=f5e237]
+              - cell "31 Ara 2023" [ref=f5e238]
+              - cell [ref=f5e239]:
+                - generic [ref=f5e240]:
+                  - link "Düzenle" [ref=f5e241] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68izi0012j0twgwnnoic5/duzenle
+                  - link "QR indir" [ref=f5e242] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68izi0012j0twgwnnoic5/qr
+            - row [ref=f5e243]:
+              - cell "COPK-0001" [ref=f5e244]
+              - cell "Çöp Kutusu" [ref=f5e245]
+              - cell "Cumhuriyet Parkı" [ref=f5e246]
+              - cell "—" [ref=f5e247]
+              - cell "Arızalı" [ref=f5e248]
+              - cell "21 Eki 2024" [ref=f5e249]
+              - cell [ref=f5e250]:
+                - generic [ref=f5e251]:
+                  - link "Düzenle" [ref=f5e252] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000fj0twmttl9qlp/duzenle
+                  - link "QR indir" [ref=f5e253] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000fj0twmttl9qlp/qr
+            - row [ref=f5e254]:
+              - cell "COPK-0002" [ref=f5e255]
+              - cell "Çöp Kutusu" [ref=f5e256]
+              - cell "Cumhuriyet Parkı" [ref=f5e257]
+              - cell "—" [ref=f5e258]
+              - cell "Aktif" [ref=f5e259]
+              - cell "14 Şub 2026" [ref=f5e260]
+              - cell [ref=f5e261]:
+                - generic [ref=f5e262]:
+                  - link "Düzenle" [ref=f5e263] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000gj0twuouoq7vn/duzenle
+                  - link "QR indir" [ref=f5e264] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000gj0twuouoq7vn/qr
+            - row [ref=f5e265]:
+              - cell "COPK-0003" [ref=f5e266]
+              - cell "Çöp Kutusu" [ref=f5e267]
+              - cell "Cumhuriyet Parkı" [ref=f5e268]
+              - cell "—" [ref=f5e269]
+              - cell "Aktif" [ref=f5e270]
+              - cell "14 Haz 2025" [ref=f5e271]
+              - cell [ref=f5e272]:
+                - generic [ref=f5e273]:
+                  - link "Düzenle" [ref=f5e274] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000hj0twx7hlnfj0/duzenle
+                  - link "QR indir" [ref=f5e275] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000hj0twx7hlnfj0/qr
+            - row [ref=f5e276]:
+              - cell "COPK-0004" [ref=f5e277]
+              - cell "Çöp Kutusu" [ref=f5e278]
+              - cell "Cumhuriyet Parkı" [ref=f5e279]
+              - cell "—" [ref=f5e280]
+              - cell "Aktif" [ref=f5e281]
+              - cell "20 Eyl 2023" [ref=f5e282]
+              - cell [ref=f5e283]:
+                - generic [ref=f5e284]:
+                  - link "Düzenle" [ref=f5e285] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000ij0twk15qolp9/duzenle
+                  - link "QR indir" [ref=f5e286] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000ij0twk15qolp9/qr
+            - row [ref=f5e287]:
+              - cell "COPK-0005" [ref=f5e288]
+              - cell "Çöp Kutusu" [ref=f5e289]
+              - cell "Cumhuriyet Parkı" [ref=f5e290]
+              - cell "—" [ref=f5e291]
+              - cell "Aktif" [ref=f5e292]
+              - cell "17 Oca 2026" [ref=f5e293]
+              - cell [ref=f5e294]:
+                - generic [ref=f5e295]:
+                  - link "Düzenle" [ref=f5e296] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000jj0tw5ne7j32k/duzenle
+                  - link "QR indir" [ref=f5e297] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000jj0tw5ne7j32k/qr
+            - row [ref=f5e298]:
+              - cell "COPK-0006" [ref=f5e299]
+              - cell "Çöp Kutusu" [ref=f5e300]
+              - cell "Cumhuriyet Parkı" [ref=f5e301]
+              - cell "—" [ref=f5e302]
+              - cell "Aktif" [ref=f5e303]
+              - cell "20 Ağu 2025" [ref=f5e304]
+              - cell [ref=f5e305]:
+                - generic [ref=f5e306]:
+                  - link "Düzenle" [ref=f5e307] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68io8000kj0twpfbbucsx/duzenle
+                  - link "QR indir" [ref=f5e308] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68io8000kj0twpfbbucsx/qr
+            - row [ref=f5e309]:
+              - cell "COPK-0007" [ref=f5e310]
+              - cell "Çöp Kutusu" [ref=f5e311]
+              - cell "Atatürk Parkı" [ref=f5e312]
+              - cell "—" [ref=f5e313]
+              - cell "Aktif" [ref=f5e314]
+              - cell "3 Ağu 2024" [ref=f5e315]
+              - cell [ref=f5e316]:
+                - generic [ref=f5e317]:
+                  - link "Düzenle" [ref=f5e318] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68j1b0014j0tw0slgokku/duzenle
+                  - link "QR indir" [ref=f5e319] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68j1b0014j0tw0slgokku/qr
+            - row [ref=f5e320]:
+              - cell "CSME-0001" [ref=f5e321]
+              - cell "Çeşme" [ref=f5e322]
+              - cell "Cumhuriyet Parkı" [ref=f5e323]
+              - cell "—" [ref=f5e324]
+              - cell "Arızalı" [ref=f5e325]
+              - cell "20 Tem 2025" [ref=f5e326]
+              - cell [ref=f5e327]:
+                - generic [ref=f5e328]:
+                  - link "Düzenle" [ref=f5e329] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iyf000zj0tw5m2unb15/duzenle
+                  - link "QR indir" [ref=f5e330] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iyf000zj0tw5m2unb15/qr
+            - row [ref=f5e331]:
+              - cell "KAYD-0001" [ref=f5e332]
+              - cell "Kaydırak" [ref=f5e333]
+              - cell "Cumhuriyet Parkı" [ref=f5e334]
+              - cell "—" [ref=f5e335]
+              - cell "Arızalı" [ref=f5e336]
+              - cell "4 Ağu 2024" [ref=f5e337]
+              - cell [ref=f5e338]:
+                - generic [ref=f5e339]:
+                  - link "Düzenle" [ref=f5e340] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iu2000sj0twcc4uppeq/duzenle
+                  - link "QR indir" [ref=f5e341] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iu2000sj0twcc4uppeq/qr
+            - row [ref=f5e342]:
+              - cell "KAYD-0002" [ref=f5e343]
+              - cell "Kaydırak" [ref=f5e344]
+              - cell "Cumhuriyet Parkı" [ref=f5e345]
+              - cell "—" [ref=f5e346]
+              - cell "Aktif" [ref=f5e347]
+              - cell "15 Kas 2025" [ref=f5e348]
+              - cell [ref=f5e349]:
+                - generic [ref=f5e350]:
+                  - link "Düzenle" [ref=f5e351] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iu2000tj0twzxjuyc83/duzenle
+                  - link "QR indir" [ref=f5e352] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iu2000tj0twzxjuyc83/qr
+            - row [ref=f5e353]:
+              - cell "KAYD-0003" [ref=f5e354]
+              - cell "Kaydırak" [ref=f5e355]
+              - cell "Atatürk Parkı" [ref=f5e356]
+              - cell "—" [ref=f5e357]
+              - cell "Arızalı" [ref=f5e358]
+              - cell "29 Haz 2025" [ref=f5e359]
+              - cell [ref=f5e360]:
+                - generic [ref=f5e361]:
+                  - link "Düzenle" [ref=f5e362] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68j220015j0twazqxrinf/duzenle
+                  - link "QR indir" [ref=f5e363] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68j220015j0twazqxrinf/qr
+            - row [ref=f5e364]:
+              - cell "OYUN-0001" [ref=f5e365]
+              - cell "Oyun Grubu" [ref=f5e366]
+              - cell "Cumhuriyet Parkı" [ref=f5e367]
+              - cell "—" [ref=f5e368]
+              - cell "Arızalı" [ref=f5e369]
+              - cell "30 Haz 2024" [ref=f5e370]
+              - cell [ref=f5e371]:
+                - generic [ref=f5e372]:
+                  - link "Düzenle" [ref=f5e373] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iv6000uj0tw3fbkn0hb/duzenle
+                  - link "QR indir" [ref=f5e374] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iv6000uj0tw3fbkn0hb/qr
+            - row [ref=f5e375]:
+              - cell "OYUN-0002" [ref=f5e376]
+              - cell "Oyun Grubu" [ref=f5e377]
+              - cell "Cumhuriyet Parkı" [ref=f5e378]
+              - cell "—" [ref=f5e379]
+              - cell "Aktif" [ref=f5e380]
+              - cell "20 Kas 2025" [ref=f5e381]
+              - cell [ref=f5e382]:
+                - generic [ref=f5e383]:
+                  - link "Düzenle" [ref=f5e384] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iv6000vj0twn39fln8c/duzenle
+                  - link "QR indir" [ref=f5e385] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iv6000vj0twn39fln8c/qr
+            - row [ref=f5e386]:
+              - cell "SALN-0001" [ref=f5e387]
+              - cell "Salıncak" [ref=f5e388]
+              - cell "Cumhuriyet Parkı" [ref=f5e389]
+              - cell "—" [ref=f5e390]
+              - cell "Arızalı" [ref=f5e391]
+              - cell "23 Ara 2024" [ref=f5e392]
+              - cell [ref=f5e393]:
+                - generic [ref=f5e394]:
+                  - link "Düzenle" [ref=f5e395] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ism000pj0twfuhcj0el/duzenle
+                  - link "QR indir" [ref=f5e396] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ism000pj0twfuhcj0el/qr
+            - row [ref=f5e397]:
+              - cell "SALN-0002" [ref=f5e398]
+              - cell "Salıncak" [ref=f5e399]
+              - cell "Cumhuriyet Parkı" [ref=f5e400]
+              - cell "—" [ref=f5e401]
+              - cell "Aktif" [ref=f5e402]
+              - cell "24 Eyl 2025" [ref=f5e403]
+              - cell [ref=f5e404]:
+                - generic [ref=f5e405]:
+                  - link "Düzenle" [ref=f5e406] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iso000qj0twjgz2yxs1/duzenle
+                  - link "QR indir" [ref=f5e407] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iso000qj0twjgz2yxs1/qr
+            - row [ref=f5e408]:
+              - cell "SALN-0003" [ref=f5e409]
+              - cell "Salıncak" [ref=f5e410]
+              - cell "Cumhuriyet Parkı" [ref=f5e411]
+              - cell "—" [ref=f5e412]
+              - cell "Aktif" [ref=f5e413]
+              - cell "25 Eyl 2023" [ref=f5e414]
+              - cell [ref=f5e415]:
+                - generic [ref=f5e416]:
+                  - link "Düzenle" [ref=f5e417] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iso000rj0twgsucsbam/duzenle
+                  - link "QR indir" [ref=f5e418] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iso000rj0twgsucsbam/qr
+            - row [ref=f5e419]:
+              - cell "SALN-0004" [ref=f5e420]
+              - cell "Salıncak" [ref=f5e421]
+              - cell "Atatürk Parkı" [ref=f5e422]
+              - cell "—" [ref=f5e423]
+              - cell "Aktif" [ref=f5e424]
+              - cell "29 Kas 2025" [ref=f5e425]
+              - cell [ref=f5e426]:
+                - generic [ref=f5e427]:
+                  - link "Düzenle" [ref=f5e428] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68j0l0013j0twn7d1422f/duzenle
+                  - link "QR indir" [ref=f5e429] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68j0l0013j0twn7d1422f/qr
+            - row [ref=f5e430]:
+              - cell "SPOR-0001" [ref=f5e431]
+              - cell "Spor Aleti" [ref=f5e432]
+              - cell "Cumhuriyet Parkı" [ref=f5e433]
+              - cell "—" [ref=f5e434]
+              - cell "Arızalı" [ref=f5e435]
+              - cell "6 Haz 2024" [ref=f5e436]
+              - cell [ref=f5e437]:
+                - generic [ref=f5e438]:
+                  - link "Düzenle" [ref=f5e439] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iqp000lj0twcxqmn6eb/duzenle
+                  - link "QR indir" [ref=f5e440] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iqp000lj0twcxqmn6eb/qr
+            - row [ref=f5e441]:
+              - cell "SPOR-0002" [ref=f5e442]
+              - cell "Spor Aleti" [ref=f5e443]
+              - cell "Cumhuriyet Parkı" [ref=f5e444]
+              - cell "—" [ref=f5e445]
+              - cell "Aktif" [ref=f5e446]
+              - cell "13 Mar 2025" [ref=f5e447]
+              - cell [ref=f5e448]:
+                - generic [ref=f5e449]:
+                  - link "Düzenle" [ref=f5e450] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iqp000mj0tw1sr02nwp/duzenle
+                  - link "QR indir" [ref=f5e451] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iqp000mj0tw1sr02nwp/qr
+            - row [ref=f5e452]:
+              - cell "SPOR-0003" [ref=f5e453]
+              - cell "Spor Aleti" [ref=f5e454]
+              - cell "Cumhuriyet Parkı" [ref=f5e455]
+              - cell "—" [ref=f5e456]
+              - cell "Aktif" [ref=f5e457]
+              - cell "31 Ağu 2024" [ref=f5e458]
+              - cell [ref=f5e459]:
+                - generic [ref=f5e460]:
+                  - link "Düzenle" [ref=f5e461] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iqp000nj0tweh5mu1hm/duzenle
+                  - link "QR indir" [ref=f5e462] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iqp000nj0tweh5mu1hm/qr
+            - row [ref=f5e463]:
+              - cell "SPOR-0004" [ref=f5e464]
+              - cell "Spor Aleti" [ref=f5e465]
+              - cell "Cumhuriyet Parkı" [ref=f5e466]
+              - cell "—" [ref=f5e467]
+              - cell "Aktif" [ref=f5e468]
+              - cell "20 Şub 2024" [ref=f5e469]
+              - cell [ref=f5e470]:
+                - generic [ref=f5e471]:
+                  - link "Düzenle" [ref=f5e472] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68iqp000oj0tw9xtqpe7w/duzenle
+                  - link "QR indir" [ref=f5e473] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68iqp000oj0tw9xtqpe7w/qr
+            - row [ref=f5e474]:
+              - cell "THTR-0001" [ref=f5e475]
+              - cell "Tahterevalli" [ref=f5e476]
+              - cell "Cumhuriyet Parkı" [ref=f5e477]
+              - cell "—" [ref=f5e478]
+              - cell "Arızalı" [ref=f5e479]
+              - cell "2 May 2026" [ref=f5e480]
+              - cell [ref=f5e481]:
+                - generic [ref=f5e482]:
+                  - link "Düzenle" [ref=f5e483] [cursor=pointer]:
+                    - /url: /panel/demirbaslar/cmsj68ixl000yj0twdl14ir9j/duzenle
+                  - link "QR indir" [ref=f5e484] [cursor=pointer]:
+                    - /url: /api/assets/cmsj68ixl000yj0twdl14ir9j/qr
+  - button "Open Next.js Dev Tools" [ref=f5e490] [cursor=pointer]

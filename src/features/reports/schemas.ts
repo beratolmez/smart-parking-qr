@@ -10,6 +10,12 @@ function emptyToUndefined<T extends z.ZodType>(schema: T) {
   return z.preprocess((v) => (v === "" ? undefined : v), schema.optional());
 }
 
+// Boş file input'un FormData'da undefined yerine boş bir File (size 0) döndürmesini
+// normalleştirir; opsiyonel fotoğraf alanı boş gönderildiğinde doğrulama patlamaz.
+function emptyFileToUndefined<T extends z.ZodType>(schema: T) {
+  return z.preprocess((v) => (v instanceof File && v.size === 0 ? undefined : v), schema.optional());
+}
+
 export const createReportSchema = z.object({
   assetCode: z
     .string({ error: "Kod gerekli." })
@@ -50,15 +56,16 @@ export const transitionReportSchema = z.object({
   note: emptyToUndefined(
     z.string().max(500, { error: "Not en fazla 500 karakter olabilir." }),
   ),
-  photo: z
-    .instanceof(File, { error: "Geçersiz dosya." })
-    .optional()
-    .refine((f) => !f || ALLOWED_PHOTO_TYPES.includes(f.type), {
-      error: "Yalnızca JPEG, PNG veya WebP görsel yükleyebilirsiniz.",
-    })
-    .refine((f) => !f || f.size <= MAX_PHOTO_BYTES, {
-      error: "Fotoğraf en fazla 10 MB olabilir.",
-    }),
+  photo: emptyFileToUndefined(
+    z
+      .instanceof(File, { error: "Geçersiz dosya." })
+      .refine((f) => ALLOWED_PHOTO_TYPES.includes(f.type), {
+        error: "Yalnızca JPEG, PNG veya WebP görsel yükleyebilirsiniz.",
+      })
+      .refine((f) => f.size <= MAX_PHOTO_BYTES, {
+        error: "Fotoğraf en fazla 10 MB olabilir.",
+      }),
+  ),
 });
 
 export type TransitionReportForm = z.infer<typeof transitionReportSchema>;

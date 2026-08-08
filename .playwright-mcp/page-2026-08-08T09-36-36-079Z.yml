@@ -1,0 +1,10 @@
+- generic [active] [ref=f2e1]:
+  - main [ref=f2e2]:
+    - heading "Kod bulunamadı" [level=1] [ref=f2e3]
+    - paragraph [ref=f2e4]: "\"OLMAYAN-9999\" kodlu bir demirbaş bulunamadı. Etiketin üzerindeki kodu kontrol edip tekrar deneyin."
+    - generic [ref=f2e5]:
+      - generic [ref=f2e6]: Demirbaş kodu
+      - textbox "Demirbaş kodu" [ref=f2e7]:
+        - /placeholder: Örn. BANK-0147
+      - button "Bildir" [ref=f2e8]
+  - button "Open Next.js Dev Tools" [ref=f2e14] [cursor=pointer]

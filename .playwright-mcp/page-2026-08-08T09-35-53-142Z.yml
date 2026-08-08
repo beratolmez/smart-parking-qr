@@ -1,0 +1,48 @@
+- generic [ref=f1e1]:
+  - main [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - paragraph [ref=f1e4]: Cumhuriyet Parkı
+      - heading "Bank" [level=1] [ref=f1e5]
+      - paragraph [ref=f1e6]: "Kod: BANK-0001"
+    - generic [ref=f1e7]:
+      - status [ref=f1e8]: Bu demirbaşta açık bildirim var (#1 · 1 kişi bildirdi). Yeniden bildirirseniz aynı kayda eklenecektir.
+      - generic [ref=f1e9]:
+        - group "Sorun türü" [ref=f1e10]:
+          - generic [ref=f1e12]:
+            - generic [ref=f1e13] [cursor=pointer]:
+              - radio "Kırık / Hasarlı" [checked] [active] [ref=f1e14]
+              - text: Kırık / Hasarlı
+            - generic [ref=f1e15] [cursor=pointer]:
+              - radio "Kirli" [ref=f1e16]
+              - text: Kirli
+            - generic [ref=f1e17] [cursor=pointer]:
+              - radio "Boya Döküntüsü" [ref=f1e18]
+              - text: Boya Döküntüsü
+            - generic [ref=f1e19] [cursor=pointer]:
+              - radio "Tehlikeli" [ref=f1e20]
+              - text: Tehlikeli
+            - generic [ref=f1e21] [cursor=pointer]:
+              - radio "Eksik / Çalınmış" [ref=f1e22]
+              - text: Eksik / Çalınmış
+            - generic [ref=f1e23] [cursor=pointer]:
+              - radio "Diğer" [ref=f1e24]
+              - text: Diğer
+        - generic [ref=f1e25]:
+          - generic [ref=f1e26]: Açıklama (isteğe bağlı)
+          - textbox "Açıklama (isteğe bağlı)" [ref=f1e27]:
+            - /placeholder: Sorunu kısaca açıklayın
+        - generic [ref=f1e28]:
+          - generic [ref=f1e29]: Telefon (isteğe bağlı)
+          - textbox "Telefon (isteğe bağlı)" [ref=f1e30]:
+            - /placeholder: 05XX XXX XX XX
+          - paragraph [ref=f1e31]: Yalnızca bu bildirimin sonucuyla ilgili sizi bilgilendirmek için kullanılır.
+        - generic [ref=f1e32]:
+          - generic [ref=f1e33]: Fotoğraf *
+          - button "Fotoğraf *" [ref=f1e34]
+        - paragraph [ref=f1e35]:
+          - text: Fotoğraf ve isteğe bağlı telefon bilginiz yalnızca bu bildirim için kullanılır.
+          - link "Aydınlatma metni için tıklayın." [ref=f1e36] [cursor=pointer]:
+            - /url: /kvkk
+        - button "Bildir" [ref=f1e37]
+  - button "Open Next.js Dev Tools" [ref=f1e43] [cursor=pointer]
+  - alert [ref=f1e47]
